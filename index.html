@@ -10,6 +10,7 @@
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="icons/favicon-32.png" sizes="32x32">
 <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<script>window.__pwa=1;addEventListener("beforeinstallprompt",function(e){e.preventDefault();window.__ip=e;try{if(typeof sheet!=="undefined"&&sheet&&sheet.t==="set")renderSheet();else if(typeof tab!=="undefined"&&tab==="hoy"&&!sheet)render()}catch(x){}});addEventListener("appinstalled",function(){window.__ip=null;try{render()}catch(x){}});</script>
 <title>Mi rendimiento</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -445,7 +446,7 @@ ic.up='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="
 ic.dn='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg>';
 ic.pause='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M8 5v14M16 5v14"/></svg>';
 ic.moon='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4 8 8 0 1 0 20 14.5z"/></svg>';
-const APP_VER="1.0.0";
+const APP_VER="1.0.2";
 const AVN=["Nico","Manu","Gatito"];
 const DEFP=[{n:"YouTube",d:"Hacer un video largo o un short",c:"p",st:"p"},{n:"Econome",d:"Desarrollar el MVP",c:"p",st:"p"},{n:"Jobs Rush",d:"",c:"p",st:"s"}];
 const QUO=["Piensa en positivo. Tu mente va hacia donde la diriges.","Si tienes limones, haz limonada. Aprovecha lo que tienes hoy.","Cree en el proceso. Cada bloque suma.","Acuérdate de tus éxitos. Eres capaz.","Agradecer lo que tienes es bueno para tu mente.","Nada de multitareas. Concéntrate a fondo en una sola cosa.","Hoy no tiene que ser perfecto, solo constante.","Un bloque bien hecho vale más que cinco a medias.","Empieza con lo que tienes, justo donde estás."];
@@ -621,6 +622,7 @@ const A={
      toast(n?`Listo: se importaron ${n} registro${n===1?"":"s"}.`:"Listo: ya tenías todo eso.")}
    catch(e){toast("Ese código no es válido. Cópialo completo.",1)}
  },
+ inst(){const e=window.__ip;if(!e)return;try{e.prompt();if(e.userChoice)e.userChoice.then(c=>{if(c&&c.outcome==="accepted"){window.__ip=null;render();if(sheet&&sheet.t==="set")renderSheet()}})}catch(x){}},
  arz(){sheetBack=null;sheet={t:"arz",dir:""};renderSheet()},
  arzd(d){sheet.dir=d.v;renderSheet()},
  calnav(d){
@@ -751,6 +753,8 @@ function setHtml(){
     <div class="r2"><div><b>Guardado de tu progreso</b><div class="sm mut" style="margin-top:2px">${cloud?"En tu cuenta de Claude. Solo tú ves estos datos.":"Solo en este dispositivo. Usa el código de abajo para respaldar o pasar tus datos."}</div></div><span class="chip ${cloud?"act":""}">${cloud?"Activo":"Local"}</span></div>
     <div class="r2"><div><b>Google</b><div class="sm mut" style="margin-top:2px">Más adelante podrás guardar tu progreso con tu cuenta de Google.</div></div><button type="button" class="btn g sm" disabled>Próximamente</button></div>
   </div>
+  ${window.__pwa?`<div class="eyebrow m" style="margin-top:26px">Instalar como app</div>
+  <div class="card acct" style="margin-top:10px"><div class="r2"><div><b>${isStandalone()?"Ya estás usando la app instalada":"Instalar en este celular"}</b><div class="sm mut" style="margin-top:2px">${isStandalone()?"Se abre sin barra del navegador.":window.__ip?"Toca el botón y confirma.":"Abre el menú de Chrome (tres puntos) y toca Instalar app."}</div></div>${isStandalone()?'<span class="chip act">Activo</span>':window.__ip?'<button type="button" class="btn sm" data-a="inst">Instalar</button>':""}</div></div>`:""}
   <div class="eyebrow m" style="margin-top:26px">Pasar tus datos a otro dispositivo</div>
   <div class="card acct" style="margin-top:10px">
     <p class="sm mut">Genera un código con todo tu progreso, cópialo y pégalo en el otro dispositivo, por ejemplo en la app de celular. Se mezcla con lo que ya tenga, no lo borra. Haz un respaldo con este código de vez en cuando, sobre todo antes de borrar los datos del navegador.</p>
@@ -777,11 +781,13 @@ function habCard(){
     <button type="button" class="yb no ${v[h.k]===0?"on":""}" data-a="hab" data-d="${d}" data-k="${h.k}" data-v="0" aria-pressed="${v[h.k]===0}" aria-label="${h.n}: no cumplido">${ic.no}</button></div></div>`).join("")}</div>
   <p class="sm mut tab" style="margin-top:8px">${ans?`${yes} de ${HAB.length} cumplidos${ans<HAB.length?` · ${HAB.length-ans} sin responder`:""}`:"Marca la palomita si lo cumpliste o la equis si no. Toca de nuevo para borrar."}</p></section>`;
 }
+const isStandalone=()=>{try{return(window.matchMedia&&matchMedia("(display-mode: standalone)").matches)||navigator.standalone===true}catch(e){return false}};
+function instBanner(){return window.__ip&&!isStandalone()?`<div class="banner" style="margin:0 0 14px"><div><div class="eyebrow">Instalar</div><b>Usa Mi rendimiento como app</b></div><button class="btn" type="button" data-a="inst">Instalar app</button></div>`:""}
 function hoy(){
   const now=new Date(),t=dk(now);
   const wd=cap(now.toLocaleDateString("es-CO",{weekday:"long"})),dm=now.toLocaleDateString("es-CO",{day:"numeric",month:"long",year:"numeric"});
   const rs=B.map((_,i)=>logs[id(t,i)]),n=rs.filter(Boolean).length,pm=mean(rs.filter(Boolean).map(r=>r.lv));
-  let h=focoCard()+`<div class="eyebrow" style="margin-top:26px">Hoy</div><h1 class="big">${wd}<span>${dm}</span></h1>`;
+  let h=instBanner()+focoCard()+`<div class="eyebrow" style="margin-top:26px">Hoy</div><h1 class="big">${wd}<span>${dm}</span></h1>`;
   h+=habMini();
   const pend=B.map((_,i)=>i).filter(i=>st(i)==="done"&&!logs[id(t,i)]);
   if(pend.length){const i=pend[pend.length-1];h+=`<div class="banner"><div><div class="eyebrow">Bloque ${i+1} terminó</div><b>¿Cómo fue tu rendimiento?</b></div><button class="btn" type="button" data-a="open" data-d="${t}" data-i="${i}">Registrar ahora</button></div>`}
