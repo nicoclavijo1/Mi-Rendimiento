@@ -117,6 +117,16 @@ h1,h2,h3,p{margin:0}
 .blk .n{font-weight:800;font-size:17px;letter-spacing:-.01em}
 .blk .r{color:var(--mut);font-size:13px}
 .del{background:none;border:0;color:var(--red);font-weight:700;font-size:13px;padding:10px 0 10px 10px;min-height:44px}
+.pzc{width:100%;margin-top:12px;display:flex;align-items:center;gap:14px;text-align:left;background:var(--bg2);border:1.5px solid var(--org);border-radius:20px;padding:12px 14px;color:var(--tx);min-height:64px}
+.pzc .bd{flex:none;background:var(--org);color:#241600;font-weight:900;letter-spacing:.12em;font-size:14px;border-radius:12px;padding:10px 12px}
+.pzc b{display:block;font-size:15px;font-weight:800}
+.pzc span.s{display:block;margin-top:2px;font-size:13px;color:var(--mut);line-height:1.35}
+.pzs{display:grid;grid-template-columns:44px 1fr;gap:14px;margin-top:18px;align-items:start}
+.pzs .lt{width:44px;height:44px;border-radius:14px;background:var(--org);color:#241600;font-weight:900;font-size:22px;display:grid;place-items:center}
+.pzs b{display:block;font-size:16px;font-weight:800}
+.pzs p{margin-top:4px;color:var(--mut);font-size:14px;line-height:1.45}
+.pzs ul{margin:8px 0 0;padding-left:18px;color:var(--mut);font-size:14px;line-height:1.5}
+.pzs li+li{margin-top:5px}
 .nav{position:fixed;left:0;right:0;bottom:0;z-index:5;background:var(--bg2);border-top:1px solid var(--line);
   padding:8px max(12px,env(safe-area-inset-right,0px)) calc(8px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px))}
 .nav div{max-width:680px;margin:auto;display:flex;gap:6px}
@@ -724,6 +734,11 @@ function commitName(){
   if(v===prof.name)return false;
   prof.name=v;saveProf();renderTop();return true;
 }
+function pzHtml(){return`<div class="row"><div><div class="eyebrow">Después del bloque</div><h2 class="h2" style="color:var(--org)">Pausa consciente</h2></div><button type="button" class="btn sm" data-a="close">Listo</button></div>
+  <div class="pzs"><div class="lt">S</div><div><b>Stop · Detente</b><p>Deja de trabajar. Cierra el bloque y haz una pausa.</p></div></div>
+  <div class="pzs"><div class="lt">T</div><div><b>Take a breath · Respira</b><p>Realiza una o dos respiraciones tranquilas.</p></div></div>
+  <div class="pzs"><div class="lt">O</div><div><b>Observe · Observa</b><p>Reconoce cómo te encuentras y qué ocurrió durante el bloque.</p><ul><li>¿Tienes los hombros en tensión?</li><li>¿Estás hambriento o cansado?</li><li>¿Hay algo que está incordiándote en segundo plano?</li><li>¿Algo que querrías cambiar?</li><li>¿Podrías enfrentarte a esta situación de manera diferente?</li></ul></div></div>
+  <div class="pzs"><div class="lt">P</div><div><b>Proceed · Continúa</b><p>Decide cómo vas a afrontar el siguiente momento.</p></div></div>`}
 function toast(m,bad){const t=$("#tt");t.innerHTML=`<div class="toast${bad?" bad":""}" role="status">${esc(m)}</div>`;clearTimeout(tmr);tmr=setTimeout(()=>{t.innerHTML=""},bad?6000:2500)}
 async function wr(fn){if(!col)return;try{await fn()}catch(e){toast("No se pudo guardar en tu cuenta"+(e&&e.code?" ("+e.code+")":"")+". Quedó en este dispositivo.",1)}}
 async function init(){
@@ -890,6 +905,7 @@ const A={
  cat(d){sheet.cat=d.v;sheet.act="";renderSheet()},
  pick(d){const a=acts[sheet.cat][+d.k];sheet.act=sheet.act===a?"":a;renderSheet()},
  save(){if(!sheet.lv)return;put(sheet.d,sheet.i,sheet.lv,sheet.act,sheet.cat,sheet.ar);sheet=null;sheetBack=null;renderSheet()},
+ pzopen(){sheet={t:"pz"};sheetBack=null;renderSheet()},
  close(){
    if(sheet&&sheet.t==="sch"&&sheet.tp){sheet.tp=null;renderSheet();return}
    if(sheet&&sheet.t==="set")commitName();
@@ -967,7 +983,7 @@ function renderSheet(){
   const el=$("#sh");
   if(!sheet){el.innerHTML="";return}
   const old=el.querySelector(".panel"),sc=old?old.scrollTop:0,olb=el.querySelector(".xbl"),slb=olb?olb.scrollTop:0;
-  el.innerHTML=`<div class="sheet"><div class="panel" role="dialog" aria-modal="true" aria-label="${sheet.t==="sch"?"Configurar horario":sheet.t==="edit"?"Editar actividades":sheet.t==="set"?"Configuración":sheet.t==="cal"?"Historial":sheet.t==="proj"?"Mis proyectos":sheet.t==="arz"?"Ajustar excitación":"Registrar rendimiento"}">${sheet.t==="edit"?editorHtml():sheet.t==="sch"?schHtml():sheet.t==="set"?setHtml():sheet.t==="reg"&&sheet.sk?skipHtml():sheet.t==="cal"?calHtml():sheet.t==="proj"?projHtml():sheet.t==="arz"?arzHtml():regHtml()}</div></div>`;
+  el.innerHTML=`<div class="sheet"><div class="panel" role="dialog" aria-modal="true" aria-label="${sheet.t==="sch"?"Configurar horario":sheet.t==="edit"?"Editar actividades":sheet.t==="set"?"Configuración":sheet.t==="cal"?"Historial":sheet.t==="proj"?"Mis proyectos":sheet.t==="arz"?"Ajustar excitación":sheet.t==="pz"?"Pausa consciente":"Registrar rendimiento"}">${sheet.t==="edit"?editorHtml():sheet.t==="sch"?schHtml():sheet.t==="set"?setHtml():sheet.t==="reg"&&sheet.sk?skipHtml():sheet.t==="cal"?calHtml():sheet.t==="proj"?projHtml():sheet.t==="arz"?arzHtml():sheet.t==="pz"?pzHtml():regHtml()}</div></div>`;
   const p=el.querySelector(".panel");if(p)p.scrollTop=sc;const nlb=el.querySelector(".xbl");if(nlb)nlb.scrollTop=slb;if(sheet.t==="sch"&&sheet.tp)tpPos();
 }
 function swHtml(a,cur,opts,attr){return`<div class="seg xsw">${opts.map(([v,t])=>`<button type="button" class="${cur===v?"on":""}" data-a="${a}" data-v="${v}" ${attr||""} aria-pressed="${cur===v}">${t}</button>`).join("")}</div>`}
@@ -1132,7 +1148,7 @@ function hoy(){
   const now=new Date(),t=dk(now);
   const wd=cap(now.toLocaleDateString("es-CO",{weekday:"long"})),dm=now.toLocaleDateString("es-CO",{day:"numeric",month:"long",year:"numeric"});
   syncB();const rs=B.map((_,i)=>logs[id(t,i)]),n=rs.filter(r=>r&&!r.sk).length,nsk=rs.filter(r=>r&&r.sk).length,pm=mean(rs.filter(r=>r&&!r.sk).map(r=>r.lv));
-  let h=instBanner()+focoCard()+`<div class="eyebrow" style="margin-top:26px">Hoy</div><h1 class="big">${wd}<span>${dm}</span></h1>`;
+  let h=instBanner()+focoCard()+`<button type="button" class="pzc" data-a="pzopen"><span class="bd">STOP</span><span><b>¿Hay que descansar?</b><span class="s">Haz una pausa consciente de 1 minuto cuando te sientas cansado o tenso.</span></span></button><div class="eyebrow" style="margin-top:26px">Hoy</div><h1 class="big">${wd}<span>${dm}</span></h1>`;
   h+=habMini();
   const pend=B.map((_,i)=>i).filter(i=>st(i)==="done"&&!logs[id(t,i)]);
   if(pend.length){const i=pend[pend.length-1];h+=`<div class="banner"><div><div class="eyebrow">Bloque ${i+1} terminó</div><b>¿Cómo fue tu rendimiento?</b></div><button class="btn" type="button" data-a="open" data-d="${t}" data-i="${i}">Registrar ahora</button></div>`}
