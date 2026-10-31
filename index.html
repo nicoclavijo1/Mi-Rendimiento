@@ -480,6 +480,60 @@ input.ei,input.na{flex:1;min-width:0;background:var(--bg2);border:1px solid var(
 .xpn span{font-size:12px;color:var(--mut);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .xpc2{flex:none;color:var(--mut);display:grid}.xpc2 svg{width:18px;height:18px;transform:rotate(90deg)}
 .xpx{justify-self:end;background:none;border:0;color:var(--mut);font-size:13px;text-decoration:underline;padding:2px 0;min-height:28px}
+
+.xsch{display:flex;align-items:center;gap:12px;width:100%;margin-top:10px;padding:12px 14px;border-radius:16px;background:var(--bg2);border:1px solid var(--line);text-align:left;min-height:60px}
+.xsi{flex:none;width:38px;height:38px;border-radius:11px;background:var(--acs);color:var(--act);display:grid;place-items:center}
+.xsi svg{width:20px;height:20px}
+.xst{flex:1;min-width:0;display:flex;flex-direction:column}
+.xst b{font-size:15px;font-weight:800}
+.xst span{font-size:12.5px;color:var(--mut);margin-top:1px}
+.xsc{flex:none;color:var(--mut);display:grid}.xsc svg{width:18px;height:18px}
+.xsum{display:flex;flex-direction:column;margin-top:16px}
+.xsum b{font-size:18px;font-weight:800}.xsum span{font-size:13px;color:var(--mut)}
+.xtl{margin-top:12px}
+.xtb{position:relative;height:34px;border-radius:10px;background:var(--bg3);border:1px solid var(--line);overflow:hidden}
+.xtb i{position:absolute;top:3px;bottom:3px;border-radius:6px;background:var(--ac);color:#fff;font-style:normal;font-weight:800;font-size:12px;display:grid;place-items:center;outline:1px solid var(--bg3);min-width:2px}
+.xtb i.bad{background:var(--red)}
+.xta{position:relative;height:18px;margin-top:4px;font-size:11px;color:var(--mut)}
+.xta span{position:absolute;transform:translateX(-50%)}
+.xta span:first-child{transform:none}
+.xbl{margin-top:12px;max-height:46vh;overflow-y:auto;display:grid;gap:8px;padding-right:2px;-webkit-overflow-scrolling:touch}
+.xbr{display:grid;grid-template-columns:38px minmax(0,1.15fr) minmax(0,1fr) 46px;gap:8px;align-items:end;padding:10px;border-radius:14px;background:var(--bg2);border:1px solid var(--line)}
+.xbr.bad{border-color:var(--red)}
+.xbr .bn{align-self:end;margin-bottom:2px}
+.xf{display:flex;flex-direction:column;gap:3px;min-width:0}
+.xf span{font-size:10.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--mut)}
+.xf input::-webkit-calendar-picker-indicator{display:none}
+.xf input,.xf select{width:100%;min-width:0;min-height:44px;background:var(--bg3);border:1px solid var(--line);border-radius:10px;padding:0 8px;color:var(--tx);font:inherit;font-size:14px;font-variant-numeric:tabular-nums}
+.xbe{grid-column:1/-1;margin:0;font-size:12.5px;color:var(--mut)}
+.xbr.bad .xbe{color:var(--red);font-weight:600}
+.xvs{margin-top:20px;font-size:13px;color:var(--mut)}
+.xvs summary{cursor:pointer;min-height:36px;display:flex;align-items:center}
+.xvs ul{list-style:none;margin:6px 0 0;padding:0;display:grid;gap:6px}
+.xvs li{display:flex;flex-direction:column;padding:8px 12px;border-radius:10px;background:var(--bg2);border:1px solid var(--line)}
+.xvs li b{color:var(--tx);font-size:13px}
+.heatw{overflow-x:auto}
+.wcell.n{border:0;background:none}
+.cd .ps{width:100%;justify-content:center}
+.cd .ps i{flex:1 1 0;max-width:5px;min-width:1px}
+.dacc .ps{max-width:140px}.dacc .ps i{flex:0 1 6px;min-width:1px}
+
+.xtm{width:100%;min-height:44px;background:var(--bg3);border:1px solid var(--line);border-radius:10px;color:var(--tx);font-weight:700;font-size:15px;text-align:center;font-variant-numeric:tabular-nums}
+.xwh{position:relative;display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;height:132px;margin-top:18px}
+.xwb{position:absolute;left:0;right:0;top:44px;height:44px;border-radius:12px;background:var(--acs);border:1px solid var(--ac);pointer-events:none}
+.xw{position:relative;z-index:1;height:132px;overflow-y:scroll;scroll-snap-type:y mandatory;scrollbar-width:none;-webkit-overflow-scrolling:touch;overscroll-behavior:contain}
+.xw::-webkit-scrollbar{display:none}
+.xws{height:44px}
+.xwi{height:44px;display:grid;place-items:center;scroll-snap-align:center;font-size:21px;font-weight:600;color:var(--mut);font-variant-numeric:tabular-nums;cursor:pointer}
+.xwi.on{color:var(--tx);font-weight:800}
+.hc small{font-weight:600;opacity:.75;font-size:10px}
+
+.heat.t{gap:4px}
+.heat.t .cell{min-height:42px;font-size:13px;border-radius:8px}
+.heat.t .cell small{font-size:8.5px}
+.heat.t .hr{font-size:11px;line-height:1.1;display:flex;flex-direction:column}
+.heat.t .hr small{font-size:9px;font-weight:600;opacity:.75}
+.heat.t .hc{font-size:10.5px}
 </style>
 </head>
 <body>
@@ -495,7 +549,10 @@ input.ei,input.na{flex:1;min-width:0;background:var(--bg2);border:1px solid var(
 <script>window.AVS=["data:image/webp;base64,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", "data:image/webp;base64,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", "data:image/webp;base64,UklGRvweAABXRUJQVlA4IPAeAACQdwCdASogASABPj0ejESiIaESqRUsIAPEsrd+PfeK/x7K+UfRf7f8lPx068XsHwB+QHNbox7Uvyv3OfMn0o+Jz/derF5j/1Z/YD3cv2A6wD+b/33rgvQA/WL0z/3D+Er9n/2k+A/+Y/3f/r9YB1U/Wn+xeBL9a/tX5C/2byH/O/1X+p/sB/av/J0JeqvNH+L/Xr7d/bP2q/v/7n/Jv+v8Jfll/W+oF+H/yv+4/2r9jf79+wnHSTLeoL7MfQP75/eP2f/wHldeoH1+/3H2q/YB/QP61/pvzM/wX//6Iv0H9XvgA/mf9i/5H+J/NT6XP4//kf5b/T/tb7aPyz+9f8L/Ff6n9pfsI/kP9L/z/9z/z//a/yv///8/2u+yj92fZJ/XD/xlLKO1VrUpGmrY0kMC83a2XSWbNX6g/oTiJS0/ali7Yrrv6t8DHta1W3goLkZ5wd28/dgrCrdtHmEHwByK1BYRSUbDfyO/++XGnFanrxIsWbQfTYwU6uqhIDseBKc3bWwkOcplxlfglwHB9u9VVMMIunwmMNlqTf/7M12O3A+v+Y3mT2flr+xgkmqJPS8jWkFbZgZAgP2Mhw1PuRw/2ndXLU92ip8YjxdSL8dvUO/Hw6htkfi2hlAcz2CDnT7LbfY/8DD0x8/1QJRojJO3/bjZoNk29E4WYpOXx2fjyfoPIV/QZNwFp3lFJ8uU5EKRqIm7ssZnuJaiYCXa3CVPSOwUMmbYCIUTGhf6oB6DQ5a+1Jur3fxMHMQ/To0EEfLC6lndMkjcpBTOYo6Hp//4YNfIQTtBQaGrGz6CWeKJmARLRleJZnZVqIhkdcxWkhwAo9rWKnk4jn6KLbcUr0puKdUtX8/WarAR/HbAEreMsLsLBieB2Mbeksg/6Onu7s5jweprjjt444Uo3CXgC+KQLTMewB3o8cdMeCbxPWxntX+JCudGYJEjYrqJ1Zu8/fTf2yuMXDjR3yJ3zs8umZAYHMFK7hw1PWU85/iI2rdCUWK8HyTi/aosZIQMCqIw2C4ABI86nC1RtKvmqBauygzxDSoel8B3RFondlXmiUIVPf432vCVGVGYDQo+86ylHV5zas6aSakIUTnULHQXsoJ86dhaZCjINxn7lB5rG73hbO3+dIccnS2DhCnr2Y8N/eeQpr6nGVNI26M7mx3rtw6QhTMHtN8ABoA9hnHA4rJlkcxh+tTsSt88Oqcpx6L5xbuh9vRpy7pmt/5wn7G5EM7iojPmaJE4DV/u6CnfWvThX3FnITHU/QU6F0CQRriMiITJpCyYAAD+/fur7bdYbwSo0rNEEBSewBuQACo+5OeehFXXYQgOk8tHeH5nQDm6ZIysYdnqyEv4mH9ya1JmnnCVuTW4JRpHnnl6CvqVm2cR1Hx+9PHGOu9btOlp6hTm9dv6XPJeDpJ4PtwXGEF2Os3OdilpWNScaTqD2rbikuojUaefifS4nzgyqRM9oGLwE4D7Uf5QWwZUtjlJhQqyDf+J3glDFOLe9H2b4okMKFo+HUc5mgjA6wHidtEv9I/qAlf6aB2aMKHGsAWMqjkoO62HAPI2mRYAYwghtuBzPlbJNGuqJpHYTzE3hlz2iZfqiDBIE7eCmYH+XmHzfDF3xmVZi5XF/Vo6QfhgrZS94SfInZMy+3E1uRIylc3yHN9jdlcftnq5c4jQSEpyj8GqY3YhR1yne4fAVUIRN3sCg2qjqdEwfMr3Zch1OgkaJmFiR3b9JYMgAH0NC41XboNrqYyFpv3oGmMOFCZS8f2CgnS0iKQg5E8lDAZe24VJLwKtj6pbXChvTfHFw2tiGISOr/3rkij/M/6luORRUBPL04shbW0xujfbKsFB34cDFSYaZadXek70Lu1EgXTICuMd7BYf+W2HG1DS23x6FUYONL41Vqo3y5eh9kbrA7EqhJgD6WOUmUcHRIT3Ua9sC7VcFaycvGfPJNvzCwbWM2Fi+iFjd+kC32EtcW0Q/rOCr9jbMcFPgG3eWp/4kvnViEsc9JI21MdOPlNBsaVNFcRiYTHVrGx4xGGxFreSnYisaybafoqZRweRMCGVYyxAguvrmiRt0gssZs++jvd5qVMkT/bzLV5wXfjC7m/EVukUUxrBMDvrdHDXARoEUwzmS5t0CUSLUU6PyKNlmRfmaHcroCwBlZcgkECqLozdV7abf80PMJj4LFTg7/87RzsEvZtSLGgjVEUrCR+o/Xmh7G3yO7tpbMdlknWYSRKHwDdFtGb5yApyQAB/EbwFSbhY/gviDo6qlgpmMe0Hbufu6sXq7tL17NExb/FSS614rXW5ZkRRTgSjbNxK7o9sALUaz8gx1HG/QSmi15mmjv3GjX9rBg16bw0utWIHJRpmM//VKb8LuZP+GYWJ5RAz1VyeHPIIKgE1JdRel9iUWL447AjxeA2ZVwb3BxToMuvQX3Oo7YZ6bGe/rOqOsPmJr2GlXty1kOtJBwmYboWAYS9NMluomKag1BkH2zQXWkxXK0bqUqb1Rc1qJzdcl1PufBfIvCU+t4mn5LErnWp4HwF18xbqw3bcfTCOsw+s0BvFjzW9deQ25Mc1SQney+eKZL2D9Eex/8V+KXYXhxhca7qh3+zFLp9WTdYdKKihU9svxpJv1iyPoRFCwoqKNdXN/46KhVUKm3l9+qrBVuodcCULv7acvFwVIiXVLt4HT+SXZT3uW9uf5PPzMQHDFf+xGnX59zlWn3IQ5Aqk98KJAzuos+Fvjg2ur/DVSVwb85L6GszHf5zZeR2StwSrVyzttsGKlc1y9K8OXgufw7PtpjeD5m58/6W5RZO+Yn6i7c78imstQeFbX9/WqnRwhbWrnncaxBfEy5AAX/kg9ohNENV8W42j7ekqYDqZxq1fjAoyqnUcbMu3z6wMkmqCSYe/ZKJpmss+11F/YgmWbrwbZIsr5RK7zox7xPoSftb6CkGyzfbHtSG88lZtFz6OUq8HzUiMQx1IczYVCSJxlWvXJcKWm0g+DkFSlv1ia8VoHjfdnozawaAs25Ft12QLomxLQFiTtQ3FBJt+Lf7o9aXin2t/yJxyyqJfmGfnqf0Z3Hr3Y+VyvW0Rkt1XlRYG5QrDreUA3XhwDS27tiWRr34CG9RAzRXla8UNmsKyM8bpA9FpNNV++HtH5PiPbRNwtr4I2ugkh0cAv61U/DZ1V+lHExsPrCdve2rV97kxZ2b7PiTZrDD+0gcdT+iKKeaAD+wMDu5FK37+SdfJPoxIzAJsS6ZOd3jZfxe/QUt9mMxdt1rGAXzk6qAq3NPfBFVqI5/H4a6DAW4eJFpymfIgGKUQXU5o4T+shIvIfjdJN4I7qIi9BD9fNAEZB5wTi2BoPG91kFgPyqztCpXjyX/N6xwmlp1IaUCUQh96ilF+sJcVtRXfJ7BVvl+tDI3KIQq3ienhDm2AcPJrOiK07ylV7pgqVk7E+zQhBdqt53yVX/hEL9IADG58+P4Tm8557fS7soxJXHwSn5QO8MVAkTEAEmH8Rf+IxSzx7Tzr5ncw0djCt8+o7kuITD00rpxcH29aeY7xbeLaMTzBuKHQCLOKD4Fx0pxESii6x/isILW5xvY/VDrngPmjHPQFFSYk85eHK+l8KoQGT7GicU3lwAWXEfSOHzUWdvyF0rKo2UkkyqwxluWD5D14hWuHaSIBNdBpK94HYuiaSOi+Pm/cyfXaC4yKezTTaxEzpuddCOm97hnfefR47WGApGBshKnpHzpyglVygo451Mn8hNyD1K6iG5YtFr99Pm36YdX+wXDmTCG7I/sWjhC0pukBMFUX/dlDWgnEoh4pZ+/xq6k+o9v6IchfVvllWgiGIfkBIqtYg8idW4doY1PhLnGgfhq7fnk2dYOY7LdmMr4a0EpgA3xYX7EHD2fyiwo9IWOin267MS3/qWOwwdax8hG8p7roXOhpBg9zva5sQ4RTkniQV8XW6C+7JmA4sff/6ZKbU7FKeMYB/BsNIg59+dxviqt3sXrz8M6Rb9WpT31uGlgSNCGkvEvmveUoxuehBAdHceGNPvqF2bOAwIDbk1YjPlmV/1XrjSsN/xBYc6j9o8M08WEAq4yU57jxXGIDZ7kNvX92TFT7Yf8/hZqX06NZ/zdHijrNE4fxuwrfipS+YPOUk3RJWwZ8w619A1/eQPzXdPDOXY4mDSZbkAItrxX7A+fvZAbMDuFxwBk37hUHM/Zz/IWuvu7yOYJ78ONm7z884XaKZ8sqbw1LkFvt+gU8FzW8Azc/C48SpXqrdL4Fbb0eh4US1GjYFJdmuhcY4weOiudFlLtcgvYTwEUX3tbgRV9EHt+a0P0p9kbzWmXpJt2A7oUfjV7KsLDm3dSfMCME4CfZN18U7tArjB42WETY9E6psQ89nLJ1+0jwmyG7J7uvau3tBicSkZ6pHK1qUH3Pilx7ThWoCAU6V+QOTQVIRht/OdsRhNeAWe2Vv6HEkvUktDuSNZfc9rsaCBBwgRLHVxb1NevsTjFEAxCQ3YjlNhg+T92bd8w1sygV1W+3EsfAcur/pA5CP1HZJ89MAIFwgyDKPS0+Xl7Q8v+0TCXuDK5hx4zvHrSYMkm+djiLUyqcKJJ3+yU5qb5crjuCZs/AAeEBfnNz/Ohd3+n3UZmFhG/dyNQd3KLI8kBCLJJz+huwGqStVKlhipVGktT2//aRtrMVMOS46VXBINePZWVlPlfvU7aX22WeJtu0tjNlXl9dgLxR4VkGoSMdz7FoDuQIQydK/KYYr0EBu60uuKrV1Z62OMrrgbZhbcw/nRauusbchI74j9N8eC1OfSwFWvyZcWjMobKzSjGdNAkQ36G9W/tkwVZ6nUufa2N98id+HjC7ukRrgYTHWaOeXxo+j3BTRaVXiorUtfg5M99G4b3A7WTJIlXyHokVPkafPy2EZE0O/tyYlaEpQJPSYeXIDy4hI5IOBYXLpPnpOR1viosXTWoGa72CFtQNQUoxe+MJPsAiS+Uz3AJnEx0sCi9yefuNIeHoYl00Fd9c5SyCxM8MaftgY+2hzOUexvPV724fvAlgk6Kin7Rm5LJgkBcFapod5xSGs5BhKCxmE7yaGeBG3oiMKfom0Ed8JOMJpfdm5wOhwWt0K4jOjJBv4acztnV+dbcIR+cpGtEKIbd3fgoaGeI+L3KUYSUf/REMefNvhqk85/3TAI1BY36XLT0+oWCmRtxwAq3rfRbSQmkA8YW6pERsChcIKwmWLHiQ144X/ouyfmVbr0R7zepViF9pAQycbh7zMTHAm9mij97bgbtd9YO743ZB/RhK/mz6Tbym6826SThobuhgjUPno4dAngRYdwjiw50TuPRq005aIARPMUKQxko+qIZ2mfv/men2dZMny7MzzqIKJSDoFMyJUb64BxEhxjX3EVoU3xw4RZ3EQypZcuk8L6f9VIwaY6Nc9g5G0lAE/KUHTzeHFwEKJNi+Iyqm6jZV0fhF7OtC3V3iDCsejfz4hI+HlAjdePKqV+E46Q4ImY/+B0T8yBQiRHZ6YgaHh/dIfEyxx1Q6490nvIEWW2yxsNiIkuxoVmXDDXK3b3v5MwHa3hDBsWHrpVxHnfsKEg9JH/v2DCyQxpBwFzYUScb/wHS4zgPRkA0kaZ510xogFZo57knhEbbJbKVGSYq56IbTHr2FRFO0CQ3EvFLhtvW8UY5j76S8tDP8TVhEjZ9R5W1Ou33+wDFQdQjfEFr/C2ZgCi5N8Ul/OIZzUi5X2Om/S4g6amAwBiWdm2Fn0xt0UA+lo5+d9/JrucjaHEEjUv5JTXXKnC68RGjrvmYImQYx6WODtwjbvzu0JM7EHrEhf4wT4Y1QoufzRt4r8kwEQYEXMrGgkIJJl0XNvVXnPj9mM1zN7dGw/bhdJ1fgfuYUOh+6Enc+7mR/2KoogfjwQ2iXVLfrjhv2ZFgat1ZIvyriCI1t2RTORYeF1aRAWA1vCd46YEx8K4rEnSuO9bMawuhEXz/UKeRml5U4/yOGWVl1jU32OYNK+Fuz3m868xfBjmifixuamNWjfonT/2kXtKW+HWKVfxOpfCVm699iZeuvlh167/9c7r4vf0dZN5AtXsN/n/435015UcECL2aWXc0hmHHkGeW0eSjk97k759uOfeAtpq0aibKzg7fusr5Ru8uSV1i4l1xvSH0HCUgqngenumszxpA3S2wKXXQyhOamEm0wgl5MVCnveyGc//Lq6aXzkuyp7XMNNeZjOZSbiOTReD0oDnu3P8tzUr1gyiorOCcHl9at3RxdQqW1YvVS390IquiM/awPOtn9UgHXwXe0xPduPoZSmGiBmoDTT0ehT4ACm9a3H2HMoU0Bwx4uCjyNUbSuip2F+SYLIp0HNkDGGLczSM0oLEEHd1gJX/m3Nc1JPWsUc7x+Cc2ous6Xyll/bR+bguJD3q3BQqEKZO2uAjICfSwnEaD0SErZlOY6DCYhFKA+fxyEkGNVO/IY8Db41O1ktMbNBB8vXocGls0G74eL5Y3U2qLjV/l/33p4burgyVvBROvuCHWf9kHbgCspgxW/4GV7oHzPOvtdIPQB/j/m002XXV4A8yFmwCwq+/B5Nd97Lf7y8w8Ks22YHZBXEZQNIglGc8BY2491JxnwgqjC7YhO4z8j+YUOOUdmYiaRObSPhtS7Cm+kTqcA9Ae/bzZ/+HAgFQW0nhhasLn5WrFK0EZoXy4ZLVx3K1mNzr/Sl+epNkxj/l24sViXGWTc6V7WUXwbaC70dYZqqJP/3/6QYPSRJ0nI0BMTf/WJqOh0o3ZvpsgbpH3f4HTDCEu9+tfxQbuaClsO87awVHUx0xmLkNP3oTQt5mzBVLRH2qTQ/KQQZ4XdyDSw8AUf+JD6J4EsyS2LA9T4v/5hbqNJeWYHU0uFo7BJ+n5L9z/OEl1mUa7Jf+GerZGDtmbV2ULLwEcgJNWXGKX/sNVXairMO+0+zVqvjZaoi3/FPJWfvXvLW5Zi14JWetr5n+v4OAM8zce5lsnZ5Hx/flMZRAAnRl2THw1bfoSBnGtflMLaXU1IDQort9HE9d0Me4dh+L2SIl5SkrujkFlkec89xrBUESEN9KX8AMYQAyozFWjyGNaC3pMUc26a7Rj4Ev2dKM8K0tq3wd98MFqmeqUzQ1H+z0UonpJNYuJWzrG6VZ7tcFdPnbx63rc3SdzjAckL4cdOTavhWSH9EytTBlKMWSZZRMSUWLlcAj6rkgt9/FiJxHHhp0Oq3WgKExo1uM85P4v9dnxMB0NzGVoN5tbd3/D12JkxnpEREYCW9NuurP3dmJffNcibknvTodp99hr8Ulp66/L0SglJiR5d0f5rO8+DFDzjK62FwzQMtZdRUTRsErYg98nBQTA/JmNXs+1g+LBB/pEiXfwBSqBxyMmtcghZpYakCy2rvdr6hcsUAzWE0qGICoWaIKFgd/AO9uDZLRYAhqlPODmotBzdPWRrcIhbL0StDrDBXZeF5pHwW7O3r/5nzMFjrMboH9e+xaTBkxjNZlxsndpBj1cqyncIAUyZVQDXXdAzJPLm/s8lTUyTdHnnPW2VpOB2IfzW/23eX4aoR9U4bbXAU9DdkcMRGKzPXdyhC/q90IOEANWkKOb0wtverIGgB0ndU7LNgzDIpBS8zi4R44gqf0fTefIuPj6K+IY6/h0W2EqbQis/C2NqOzFnWytowiWgw1bUdzX/EafSVnx0NMAbQ99Kzmo5OTA6C5oW4Ae11Ri7oqOZPKt3J/tVGVrwuO+LS1f95VuLCks3lTEK7FpzVBIMMO3cMiuVptmq6tls6T7c3FikFthSuxYyzWWEsCViP271oNE/kUpH3a7/8cel8tCnv1MLmCeEP9UnVradX2gEAAAYJv/7FArQC/qoiS628Axss7hCVgMSnqmySNjYPSj6UHbKjZoyB15rhoGhEcETH5iWEKRBMjayab+qHAR7KvI35ddmuRSfbT6FpZNrNK1V2hpCw2UbiKgaSSPzsyIvd89qMOvnr84k32AMaKWRMeBZGm7ER+EyqdVDP8LuAYCnOiKkDC9FjthRj8hwcl4FE3v+7jVazkJQMUwCJP53jIjVkX9jH8s3qLdzU66Vw7Q7GLqHYDCHPm9NxozlyqQOkVzaVFEOeeLWKjeLDgeAOarFRMMWMtG66pJXVmBEo2zkrklLEc3WkDz8mmGDsJpXyUP1UsNJ99vH1ppTU4I9xCuSA0PHd//6KshKBhbeL8vEw/M6cO3SjewyTZJWZgBQH3kai7NsMstSQNsGX8ZpsvtkM9DO/a5BncXq5O2yVX5RfazKvJmd6Ae3aomh/75K4d4KnsrrCZJ/cfSUPbJh0YFMDZ7MNR8304/qpoeUKNkKvl1uJnmENjBPZq1Qlf7SEB09V6fg9GNU8fvnhnA6lUtcNC0pC5Wq+7cHjp57JXMSDoxlihEidacOkaQsilj/na/yTmuMNfpVbclXOm0U6ZxAloTgI+hbND20eGU1ulmVXDvmL4p456iiikIEYHdBqB8L36RwfIKg9vJZghlT38EvzY91iLb8oVb3BCX2mKcsPGLTMUYa+2hqy9zC0tuLC3tELUr72/j2ATCD2ATOAE70+aVH688Gsj7s5uOJPoO50GzUkP9GPivsE7nZD+BJoEmcidb61KvJAYq81LC2dbVbcYpK+a/kaYAA1KbYo0Z+d7Oym8L6BGvNZ9yyeY+Cd6l6eSJyRIv6w7Zk5WAJ4XoxR0ohxwBKIEMn3AzKJ84pbyNNPCJTruq6VwECXo8f0VZfW9GpB6WeHp70dvj7fvQnQ2yL3347PbWX5bFhTbxcZDrP48POjvKVTp9YqViuexZhs+AgxyCAw7Hnt5RjQ1YAkFpObw3XwyGuwc1TNzQBZrf/5edMdCvQa1h8bnWQMogb8XTmaKEmBIItH6TvE3Xvc6O8ZkCWUmmTAeVxsSTOLAq1h76z0SUwhZBqsd1ZqFn79M9Mle3JqbipPnH0mX2xTepld8JR57xoXciCRh2V2JlOwlNYFt8x33xbZvST+jnyEoDw2O3mVAJEmMn1mOF1WMiGFoWk303plpYIoNPclgzotmyGo8ioVMSUC7Ut25T4/cHyvWlP3tKgUFwHePFuC3jrVHA8gFGL8+UVAJewRW8H/wQSS2KVqlvD5tFQWsihZeFMS+j0qUskCAE2SGnzywpdJpJBiTIks93QWPVOs+u7OJel7vJ2TUb6RQflLZvl2ej/T6E2AsxVPkZVwef8MmDNSTrMrtJW3xaIKu32A5dplQels1T87NeRGdeijryiMFjhJzvThYb6qFkzq0of5G971n1ByjbNFNU5EQmazMuHQ618MSP9FMwO8zhpuBgP3rJD3WVi++/PAE6Aj8OsW72fRf4lDUzRH2A6E+55010ydEXRJtncvqVK+8E5OARwvjwxIp9cyQ8Bf8LYATC7aD8vT+wgfMhI+Yu6QDC9IarnDZBgiKRHTFJPiPW4BUQ6OMhZPEDgkeDskbkoP5srd7G3oGzpUyFwy9DysWBVI/qzHm3fia+wzLKYdRgwiOtY+OGCoBLK+taK4WaoRsJM6y9J4iH2yakjuh1R0FsISWUd5uiwak5/y69jJJ23B7hnpUfXn/SUTDGFtGDbpMXzbYb5PyjFk0AABTABLHf/EYVh2rU7JB4wR8ezBLYMuZ5t6x6I8Ji611duBdCJeP45lJDDPLpRK8AYhjqRnEjU/wjCP3zBIdJPAdkBbXWR6JFYFwfra/AFXhQNNRR7AQncAmiDeHj1D0kiXsVlib4Tq9t+qyM4fwumOS+LC+i7klgdwn+p8CpTF957g+TrmSIRmKRbWiiN7zveD/mnXPwbso0KJYPGQKFAYH4ZbXOt791iY5S4ikt13ahpLPtw4NdiBfeHkZG3P48Nsny0RmMg8qGB0E0Qti2dFriMU1H/h8zx0e3Km/ZP8lcqd6+cV1W06ogFmRN36RcjcVgWP1HrfoCHhfs5yRwEbLsvRVo1HUgTeOoh6Shyh8/NL3oxDkRrLMEB+aL5Tq0ihItkdjQA+lCuOOvJ6NlSWgSqEKtzqdE1M7u6YG9Iv2CVvWr8MXJzUjlfAzL0vD8dPDvjDP42w0ACCUhdUEYPtwq4+MIeuejiyr77dpoa00aRUEA4SNabn+EdnK1+ySgTar3RFEZjL8uJHYoJGTXG1SULwFad9LWYPk8iGTLTnkfVdWipxzTVwY6qLLhCZ4qurW/wECMgOdjpLbdC/V2Jc2upO0KE4e5nelaHHh1CTl1CMm1wEI6Wox+gu/I7iu/pEvGfJZkxcKygEAoHy2/R92wmzyfPBY7BstJHdUSFmv2IJuVb+rQXCbOcGXkoIyAhb2/t5wMczclf8DZub7Zr6o9pwohYKIQVyqM9XRRRpMxaUbLa2Olg97nLoGdcRYVcWLpv77RLOGBcw2oQ43flm/5y4KEpKwS6lHiswEq6MNF/+trPBC3u6e20tR5A+EbCrLk33iPzFYiSOURTNYDEV0bIZ+WEAYQ/rtaUo2EPdSp9395HysEUAACpbk95/Fw2JRFwIzvnAMz7/+X0nQVbiF5SgssHvT1rOyKEeQtiRNYa56wdfQaw3NmUicJwkAe8a+4WmDzklTnD0N1dD3aVqVE2AAAAAAA="];</script>
 
 <script>
-const B=[["07:00","08:30"],["08:45","10:15"],["10:30","12:00"],["13:00","14:30"],["14:45","16:15"]];
+/* Horarios por versiones. V0 es el horario original de la app: los registros viejos se leen contra él. */
+const V0={id:"v0",created:0,from:"2000-01-01",blocks:[{id:"b1",s:"07:00",e:"08:30"},{id:"b2",s:"08:45",e:"10:15"},{id:"b3",s:"10:30",e:"12:00"},{id:"b4",s:"13:00",e:"14:30"},{id:"b5",s:"14:45",e:"16:15"}]};
+let scheds=[],schedsTs=0,B=[];
+const SCH_MIN=30,SCH_MAXD=120,SCH_END=1425,SCH_MAX=48;
 const L=[null,
  {n:"Bajo",d:"Me costó enfocarme. Hubo distracciones frecuentes y avancé poco."},
  {n:"Alto",d:"Buen enfoque. Avancé de forma constante con pocas interrupciones."},
@@ -532,7 +589,7 @@ ic.up='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="
 ic.dn='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg>';
 ic.pause='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M8 5v14M16 5v14"/></svg>';
 ic.moon='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4 8 8 0 1 0 20 14.5z"/></svg>';
-const APP_VER="1.2.2";
+const APP_VER="1.3.3";
 const AVN=["Nico","Manu","Gatito"];
 const DEFP=[];
 const OLDPROJ=[{n:"YouTube",d:"Hacer un video largo o un short",c:"p",st:"p"},{n:"Econome",d:"Desarrollar el MVP",c:"p",st:"p"},{n:"Jobs Rush",d:"",c:"p",st:"s"}];
@@ -552,13 +609,51 @@ const mins=t=>{const[a,b]=t.split(":");return +a*60+ +b};
 const st=i=>{const n=new Date(),m=n.getHours()*60+n.getMinutes();return m<mins(B[i][0])?"pend":m>=mins(B[i][1])?"done":"act"};
 const t12=t=>{let[h,m]=t.split(":").map(Number);return(h%12||12)+":"+pad(m)+(h>=12?" pm":" am")};
 const rng=i=>t12(B[i][0])+" – "+t12(B[i][1]);
-const id=(d,i)=>"log_"+d+"_"+(i+1);
+const hm=m=>pad(Math.floor(m/60))+":"+pad(m%60);
+const TRe=/^([01]\d|2[0-3]):[0-5]\d$/;
+function allV(){return[V0].concat(scheds).sort((a,b)=>a.from<b.from?-1:a.from>b.from?1:(a.created||0)-(b.created||0))}
+function verFor(d){let v=V0;for(const x of allV()){if(x.from<=d)v=x;else break}return v}
+const bl=d=>verFor(d).blocks.map(b=>[b.s,b.e]);
+function syncB(){B=bl(dk(new Date()))}
+const rngD=(d,i)=>{const b=bl(d)[i];return b?t12(b[0])+" – "+t12(b[1]):""};
+function blkInfo(d,i){const v=verFor(d),b=v.blocks[i];return b?{v:v.id,bk:b.id,s:b.s,e:b.e,dur:mins(b.e)-mins(b.s)}:{}}
+function cleanInfo(r){if(r&&typeof r.v==="string"&&r.v&&TRe.test(r.s||"")&&TRe.test(r.e||"")&&mins(r.e)>mins(r.s)){return{v:r.v.slice(0,40),bk:String(r.bk||"").slice(0,40),s:r.s,e:r.e,dur:mins(r.e)-mins(r.s)}}return{}}
+/* Horario real de un registro: el que guardó, o el original (v0) si es un registro antiguo. Si no se puede recuperar, null. */
+function rinfo(r){
+  if(!r)return null;
+  if(r.v&&TRe.test(r.s||"")&&TRe.test(r.e||"")){const sm=mins(r.s),em=mins(r.e);return em>sm?{v:r.v,bk:r.bk||("b"+r.b),s:r.s,e:r.e,sm,em,dur:em-sm}:null}
+  if(!r.v&&r.b>=1&&r.b<=V0.blocks.length){const b=V0.blocks[r.b-1],sm=mins(b.s),em=mins(b.e);return{v:"v0",bk:b.id,s:b.s,e:b.e,sm,em,dur:em-sm}}
+  return null}
+const rtxt=(r,d,i)=>{const x=r&&rinfo(r);return x?t12(x.s)+" – "+t12(x.e):rngD(d,i)};
+/* Franjas de 2 horas (4–6, 6–8, 8–10…). Cada bloque aporta los minutos que coinciden con cada franja. */
+const SLOT=120;
+function slotSplit(x,fn){for(let q=Math.floor(x.sm/SLOT);q*SLOT<x.em;q++){const ov=Math.min(x.em,(q+1)*SLOT)-Math.max(x.sm,q*SLOT);if(ov>0)fn(q*SLOT/60,ov)}}
+const h12=h=>(h%12)||12,slotLbl=h=>h12(h)+"–"+h12(h+2),slotAp=h=>h>=12&&h<24?"pm":"am",slotTxt=h=>t12(hm(h*60))+" – "+(h*60+SLOT>=1440?"12:00 am":t12(hm(h*60+SLOT)));
+function extras(d){const have=new Set(bl(d).map((_,i)=>id(d,i)));return Object.keys(logs).filter(k=>{const r=logs[k];return r&&r.date===d&&!have.has(k)}).map(k=>({k,r:logs[k]})).sort((a,b)=>((rinfo(a.r)||{}).sm||0)-((rinfo(b.r)||{}).sm||0))}
+function extraRows(ex,del){return ex.map(({k,r})=>{const x=rinfo(r),tm=x?t12(x.s)+" – "+t12(x.e):"",db=del?`<button class="del" type="button" data-a="del" data-k="${k}">${armed===k?"¿Seguro?":"Eliminar"}</button>`:"";
+  return r.sk?`<div class="dr no"><span class="bn">–</span><div class="tx"><b>No trabajé</b><span class="tab">${tm}${r.why?" · "+esc(r.why):""}</span></div>${db}</div>`:r.lv>=1&&r.lv<=3?`<div class="dr"><span class="bn l${r.lv}">•</span><div class="tx"><b>${esc(r.act||"Sin actividad")}</b><span class="tab">${tm}${r.ar?" · "+AR[r.ar].s:""}</span></div>${db||pill(r.lv)}</div>`:""}).join("")}
+const fmtH=m=>(Math.round(m/6)/10).toString().replace(".",",")+" h";
+const fmtDur=m=>m<60?m+" min":(m%60?Math.floor(m/60)+" h "+(m%60)+" min":m/60+" h");
+function parseScheds(v){
+  try{if(typeof v==="string")v=JSON.parse(v);if(!Array.isArray(v))return null;
+    const out=[],seen=new Set(["v0"]);
+    v.forEach(x=>{
+      if(!x||typeof x.id!=="string"||!x.id||x.id.length>40||seen.has(x.id)||!/^\d{4}-\d{2}-\d{2}$/.test(x.from||"")||!Array.isArray(x.blocks)||!x.blocks.length||x.blocks.length>SCH_MAX)return;
+      const bs=[],ids=new Set();let ok=true;
+      x.blocks.forEach(b=>{if(!b||!TRe.test(b.s||"")||!TRe.test(b.e||"")||typeof b.id!=="string"||ids.has(b.id)||mins(b.e)-mins(b.s)<SCH_MIN)ok=false;else{ids.add(b.id);bs.push({id:b.id.slice(0,40),s:b.s,e:b.e})}});
+      if(!ok)return;bs.sort((a,b)=>mins(a.s)-mins(b.s));
+      for(let i=1;i<bs.length;i++)if(mins(bs[i].s)<mins(bs[i-1].e))return;
+      seen.add(x.id);out.push({id:x.id,created:+x.created||0,from:x.from,blocks:bs})});
+    return out}catch(e){}return null}
+function saveScheds(){schedsTs=Date.now();lsSave();wr(()=>col.doc("sch").set({items:JSON.stringify(scheds),ts:schedsTs}))}
+function mergeScheds(list){let n=0;list.forEach(v=>{if(!scheds.some(x=>x.id===v.id)){scheds.push(v);n++}});return n}
+const id=(d,i)=>{const v=verFor(d),b=v.blocks[i];return v.id==="v0"||!b?"log_"+d+"_"+(i+1):"log_"+d+"_"+v.id+"_"+b.id};
 const mean=a=>a.length?a.reduce((x,y)=>x+y,0)/a.length:null;
 const f1=v=>v==null?"–":v.toFixed(1);
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const cap=s=>s.charAt(0).toUpperCase()+s.slice(1);
 const wdOf=d=>new Date(d+"T12:00:00").getDay();
-const recs=()=>Object.values(logs).filter(r=>r&&r.date&&r.b>=1&&r.b<=5&&r.lv>=1&&r.lv<=3);
+const recs=()=>Object.values(logs).filter(r=>r&&r.date&&r.b>=1&&r.b<=SCH_MAX&&r.lv>=1&&r.lv<=3);
 const dd=d=>d.slice(8)+"/"+d.slice(5,7);
 const longDate=d=>cap(new Date(d+"T12:00:00").toLocaleDateString("es-CO",{weekday:"long",day:"numeric",month:"long"}));
 const pill=n=>`<span class="pill l${n}">${L[n].n}</span>`;
@@ -569,15 +664,15 @@ try{const t=localStorage.getItem("nc_theme");if(t==="dark"||t==="light")document
 const heat=v=>{const p=Math.round(12+(v-1)/2*88);return`background:color-mix(in srgb,var(--ac) ${p}%,var(--bg2));color:${p>=55?"#fff":"var(--tx)"}`};
 
 /* ---------- Almacenamiento ---------- */
-function lsLoad(){try{const o=JSON.parse(localStorage.getItem("nc_rend")||"{}");logs=o.logs||{};habs=o.habs||{};const used=Object.keys(logs).length>0;if(o.acts&&o.acts.w&&o.acts.p){acts=o.acts;actsTs=o.actsTs||0}else if(used){acts=clone(OLDACTS)}if(Array.isArray(o.projs)){projs=o.projs;projsTs=o.projsTs||0}else if(used){projs=clone(OLDPROJ)}if(o.prof){prof={name:String(o.prof.name||"").slice(0,24),av:+o.prof.av||0};profTs=o.profTs||0}}catch(e){}}
-function lsSave(){try{localStorage.setItem("nc_rend",JSON.stringify({logs,habs,acts,actsTs,prof,profTs,projs,projsTs}))}catch(e){}}
+function lsLoad(){try{const o=JSON.parse(localStorage.getItem("nc_rend")||"{}");logs=o.logs||{};habs=o.habs||{};const used=Object.keys(logs).length>0;{const sc=parseScheds(o.scheds);if(sc){scheds=sc;schedsTs=o.schedsTs||0}}if(o.acts&&o.acts.w&&o.acts.p){acts=o.acts;actsTs=o.actsTs||0}else if(used){acts=clone(OLDACTS)}if(Array.isArray(o.projs)){projs=o.projs;projsTs=o.projsTs||0}else if(used){projs=clone(OLDPROJ)}if(o.prof){prof={name:String(o.prof.name||"").slice(0,24),av:+o.prof.av||0};profTs=o.profTs||0}}catch(e){}}
+function lsSave(){try{localStorage.setItem("nc_rend",JSON.stringify({logs,habs,acts,actsTs,prof,profTs,projs,projsTs,scheds,schedsTs}))}catch(e){}}
 function parseProjs(v){try{if(typeof v==="string")v=JSON.parse(v);if(Array.isArray(v))return v.filter(p=>p&&p.n).map(p=>({n:String(p.n).slice(0,40),d:String(p.d||"").slice(0,60),c:p.c==="w"?"w":"p",st:p.st==="s"?"s":"p"}))}catch(e){}return null}
 function saveProjs(){projsTs=Date.now();lsSave();wr(()=>col.doc("proj").set({items:JSON.stringify(projs),ts:projsTs}))}
 const b64=u=>{let t="";for(let i=0;i<u.length;i+=8192)t+=String.fromCharCode.apply(null,u.subarray(i,i+8192));return btoa(t)};
 const unb64=t=>Uint8Array.from(atob(t),c=>c.charCodeAt(0));
 async function gz(t){const cs=new Blob([t]).stream().pipeThrough(new CompressionStream("gzip"));return new Uint8Array(await new Response(cs).arrayBuffer())}
 async function ungz(u){const ds=new Blob([u]).stream().pipeThrough(new DecompressionStream("gzip"));return await new Response(ds).text()}
-async function makeCode(){const j=JSON.stringify({v:1,n:{l:Object.keys(logs).length,h:Object.keys(habs).length},logs,habs,acts,actsTs,prof,profTs,projs,projsTs});
+async function makeCode(){const j=JSON.stringify({v:1,n:{l:Object.keys(logs).length,h:Object.keys(habs).length},logs,habs,acts,actsTs,prof,profTs,projs,projsTs,scheds,schedsTs});
   try{if(typeof CompressionStream!=="undefined")return"NC2:"+b64(await gz(j))}catch(e){}
   return"NC1:"+b64(new TextEncoder().encode(j))}
 async function readCode(c){c=String(c).replace(/\s+/g,"");const k=c.slice(0,4),u=unb64(c.slice(4));
@@ -585,10 +680,10 @@ async function readCode(c){c=String(c).replace(/\s+/g,"");const k=c.slice(0,4),u
 function importData(o){
   let n=0;const w=[],dRe=/^\d{4}-\d{2}-\d{2}$/;
   Object.values(o.logs||{}).forEach(r=>{
-    if(!r||!dRe.test(r.date)||!(r.b>=1&&r.b<=5)||!((r.lv>=1&&r.lv<=3)||(r.sk===1&&+r.lv===0)))return;
-    const k=id(r.date,r.b-1),cur=logs[k],ts=+r.ts||0;if(cur&&(+cur.ts||0)>=ts)return;
-    if(r.sk===1){const z={date:r.date,b:+r.b,lv:0,sk:1,why:String(r.why||"").slice(0,80),ts};logs[k]=z;w.push([k,z]);n++;return}
-    const x={date:r.date,b:+r.b,lv:+r.lv,act:String(r.act||"").slice(0,40),cat:r.cat==="p"?"p":"w",ts};if(r.ar>=1&&r.ar<=5)x.ar=+r.ar;
+    if(!r||!dRe.test(r.date)||!(r.b>=1&&r.b<=SCH_MAX)||!((r.lv>=1&&r.lv<=3)||(r.sk===1&&+r.lv===0)))return;
+    const ci0=cleanInfo(r),k=(ci0.v&&ci0.v!=="v0"&&ci0.bk)?"log_"+r.date+"_"+ci0.v+"_"+ci0.bk:"log_"+r.date+"_"+r.b,cur=logs[k],ts=+r.ts||0;if(cur&&(+cur.ts||0)>=ts)return;
+    if(r.sk===1){const z=Object.assign({date:r.date,b:+r.b,lv:0,sk:1,why:String(r.why||"").slice(0,80),ts},cleanInfo(r));logs[k]=z;w.push([k,z]);n++;return}
+    const x=Object.assign({date:r.date,b:+r.b,lv:+r.lv,act:String(r.act||"").slice(0,40),cat:r.cat==="p"?"p":"w",ts},cleanInfo(r));if(r.ar>=1&&r.ar<=5)x.ar=+r.ar;
     logs[k]=x;w.push([k,x]);n++});
   Object.values(o.habs||{}).forEach(r=>{
     if(!r||!dRe.test(r.date))return;
@@ -597,6 +692,7 @@ function importData(o){
     habs[r.date]=x;w.push(["hab_"+r.date,x]);n++});
   if(o.acts&&((+o.actsTs||0)>actsTs||actsTs===0)){const a=parseActs(o.acts);if(a){acts=a;actsTs=+o.actsTs||0;w.push(["cfg",{acts:JSON.stringify(acts),ts:actsTs}])}}
   if(o.projs&&((+o.projsTs||0)>projsTs||projsTs===0)){const a=parseProjs(o.projs);if(a){projs=a;projsTs=+o.projsTs||0;w.push(["proj",{items:JSON.stringify(projs),ts:projsTs}])}}
+  {const sc=parseScheds(o.scheds);if(sc&&mergeScheds(sc)){schedsTs=Date.now();w.push(["sch",{items:JSON.stringify(scheds),ts:schedsTs}]);syncB()}}
   if(o.prof&&(+o.profTs||0)>profTs){prof={name:String(o.prof.name||"").slice(0,24),av:+o.prof.av||0};profTs=+o.profTs;w.push(["prof",{name:prof.name,av:prof.av,ts:profTs}])}
   lsSave();wr(()=>Promise.all(w.map(([k,x])=>col.doc(k).set(x))));
   render();renderTop();return n;
@@ -631,7 +727,7 @@ function commitName(){
 function toast(m,bad){const t=$("#tt");t.innerHTML=`<div class="toast${bad?" bad":""}" role="status">${esc(m)}</div>`;clearTimeout(tmr);tmr=setTimeout(()=>{t.innerHTML=""},bad?6000:2500)}
 async function wr(fn){if(!col)return;try{await fn()}catch(e){toast("No se pudo guardar en tu cuenta"+(e&&e.code?" ("+e.code+")":"")+". Quedó en este dispositivo.",1)}}
 async function init(){
-  lsLoad();setSync(false);render();try{if(navigator.storage&&navigator.storage.persist)navigator.storage.persist()}catch(e){}
+  lsLoad();syncB();setSync(false);render();try{if(navigator.storage&&navigator.storage.persist)navigator.storage.persist()}catch(e){}
   try{
     if(typeof claude!=="undefined"){
       const u=await claude.use("user"),db=await claude.use("db");
@@ -640,14 +736,17 @@ async function init(){
       if(db&&uid){
         col=db.collection("data/users/"+uid);
         col.onSnapshot(s=>{
-          const Lg={},Hb={};let cfg=null,pr=null,pj=null;
+          const Lg={},Hb={};let cfg=null,pr=null,pj=null,sc=null;
           s.docs.forEach(d=>{const x=d.data();if(!x)return;const o=clone(x);
             if(d.id.startsWith("log_"))Lg[d.id]=o;
             else if(d.id.startsWith("hab_"))Hb[o.date||d.id.slice(4)]=o;
             else if(d.id==="cfg")cfg=o;
             else if(d.id==="proj")pj=o;
+            else if(d.id==="sch")sc=o;
             else if(d.id==="prof")pr=o});
           logs=Lg;habs=Hb;
+          if(sc){const a=parseScheds(sc.items);if(a){mergeScheds(a);schedsTs=Math.max(schedsTs,sc.ts||0)}}
+          syncB();
           if(cfg){const a=parseActs(cfg.acts);if(a&&(cfg.ts||0)>=actsTs){acts=a;actsTs=cfg.ts||0}}
           if(pj){const a=parseProjs(pj.items);if(a&&(pj.ts||0)>=projsTs){projs=a;projsTs=pj.ts||0}}
           if(pr&&(pr.ts||0)>=profTs){prof={name:String(pr.name||"").slice(0,24),av:+pr.av||0};profTs=pr.ts||0}
@@ -661,12 +760,12 @@ async function init(){
 /* ---------- Escritura de datos ---------- */
 const SKR=["Imprevisto","Salud","Descanso","Reunión o evento","Viaje o traslado","Otro"];
 function putSkip(d,i,why){
-  const r={date:d,b:i+1,lv:0,sk:1,why:String(why||"").slice(0,80),ts:Date.now()};
+  const r=Object.assign({date:d,b:i+1,lv:0,sk:1,why:String(why||"").slice(0,80),ts:Date.now()},blkInfo(d,i));
   logs[id(d,i)]=r;lsSave();render();
   wr(()=>col.doc(id(d,i)).set(r));
 }
 function put(d,i,lv,act,cat,ar){
-  const r={date:d,b:i+1,lv,act:act||"",cat:act?cat:"",ts:Date.now()};
+  const r=Object.assign({date:d,b:i+1,lv,act:act||"",cat:act?cat:"",ts:Date.now()},blkInfo(d,i));
   if(ar)r.ar=ar;
   logs[id(d,i)]=r;lsSave();render();
   wr(()=>col.doc(id(d,i)).set(r));
@@ -746,6 +845,34 @@ const A={
    sheet.po=-1;projs.push({n:v.slice(0,40),d:(b?b.value.trim():"").slice(0,60),c:sheet.nc||"p",st:sheet.ns==="s"?"s":"p"});
    sheet.nn=sheet.nd="";sheet.arm=null;sheet.addo=false;saveProjs();renderSheet();render();const n=$("#newproj");if(n)n.focus();
  },
+ schopen(){
+   const last=allV().slice(-1)[0];
+   sheetBack=null;sheet={t:"sch",draft:last.blocks.map(b=>({id:b.id,s:mins(b.s),dur:mins(b.e)-mins(b.s)})),from:schTomorrow(),nid:1};
+   sheet.draft=schNorm(sheet.draft);renderSheet()},
+ schadd(){
+   const d=schNorm(sheet.draft);if(d.length>=SCH_MAX){toast("Máximo "+SCH_MAX+" bloques.",1);return}
+   let s0=d.length?d[d.length-1].s+d[d.length-1].dur:420;s0=Math.max(0,Math.min(SCH_END-SCH_MIN,Math.round(s0/15)*15));
+   sheet.tp={k:-1,h:(Math.floor(s0/60)%12||12)-1,m:Math.round((s0%60)/15)%4,p:s0>=720?1:0,dur:90};renderSheet()},
+ tpdur(d){sheet.tp.dur=+d.v;document.querySelectorAll("[data-a=tpdur]").forEach(x=>x.classList.toggle("on",+x.dataset.v===sheet.tp.dur));tpRefresh()},
+ tpopen(d){const k=+d.k,b=sheet.draft[k];if(!b)return;const h24=Math.floor(b.s/60);sheet.tp={k,h:(h24%12||12)-1,m:Math.round((b.s%60)/15)%4,p:h24>=12?1:0};renderSheet()},
+ tpitem(d){const w=document.querySelector('.xw[data-c="'+d.c+'"]');sheet.tp[d.c]=+d.i;if(w){w.querySelectorAll(".xwi").forEach((x,j)=>{x.classList.toggle("on",j===+d.i);x.setAttribute("aria-selected",String(j===+d.i))});try{w.scrollTo({top:+d.i*44,behavior:"smooth"})}catch(e){w.scrollTop=+d.i*44}}tpRefresh()},
+ tpok(){const t=sheet.tp;
+   if(t.k===-1){const c=tpConflict();if(c){toast(c,1);return}
+     sheet.draft.push({id:"n"+Date.now().toString(36)+(sheet.nid++),s:tpMin(),dur:t.dur});sheet.draft=schNorm(sheet.draft);sheet.tp=null;renderSheet();toast("Bloque agregado.");return}
+   schSetStart(t.k,tpMin());sheet.tp=null;renderSheet()},
+ tpcancel(){sheet.tp=null;renderSheet()},
+ schdel(d){sheet.draft.splice(+d.k,1);renderSheet()},
+ schsave(){
+   const d=schNorm(sheet.draft),er=schErr(d);if(!d.length||er.some(Boolean))return;
+   if(sheet.from<schMin()){toast("Elige una fecha desde "+shortD(schMin())+".",1);return}
+   const last=allV().slice(-1)[0],key=a=>a.map(b=>b.s+"-"+b.e).join(",");
+   const nb=d.map(b=>({id:b.id,s:hm(b.s),e:hm(b.s+b.dur)}));
+   if(key(nb)===key(last.blocks)&&last.from<=sheet.from){toast("No hay cambios en el horario.",1);return}
+   /* Antes del primer cambio, los registros antiguos quedan atados al horario original */
+   Object.keys(logs).forEach(k=>{const r=logs[k];if(r&&!r.v&&r.b>=1&&r.b<=V0.blocks.length){const b=V0.blocks[r.b-1];Object.assign(r,{v:"v0",bk:b.id,s:b.s,e:b.e,dur:mins(b.e)-mins(b.s)});wr(()=>col.doc(k).set(r))}});
+   const v={id:"v"+Date.now().toString(36)+Math.random().toString(36).slice(2,5),created:Date.now(),from:sheet.from,blocks:nb};
+   scheds.push(v);saveScheds();syncB();const f=sheet.from;sheet=null;sheetBack=null;renderSheet();render();
+   toast("Horario guardado. Aplica desde "+(f===dk(new Date())?"hoy":shortD(f))+".")},
  settings(){sheetBack=null;sheet={t:"set",pg:""};renderSheet()},
  setpg(d){if(sheet&&sheet.t==="set"){commitName();const i=$("#impc");if(i)sheet.imp=i.value;sheet.pg=d.v||"";renderSheet()}},
  av(d){const i=$("#nm");if(i&&sheet&&sheet.t==="set")sheet.nm=i.value;prof.av=+d.v;saveProf();renderTop();renderSheet()},
@@ -764,6 +891,7 @@ const A={
  pick(d){const a=acts[sheet.cat][+d.k];sheet.act=sheet.act===a?"":a;renderSheet()},
  save(){if(!sheet.lv)return;put(sheet.d,sheet.i,sheet.lv,sheet.act,sheet.cat,sheet.ar);sheet=null;sheetBack=null;renderSheet()},
  close(){
+   if(sheet&&sheet.t==="sch"&&sheet.tp){sheet.tp=null;renderSheet();return}
    if(sheet&&sheet.t==="set")commitName();
    if(sheet&&sheet.t==="edit"&&sheetBack){sheet=sheetBack;sheetBack=null;if(sheet.t==="reg"&&!acts[sheet.cat].includes(sheet.act))sheet.act="";renderSheet()}
    else{sheet=null;sheetBack=null;renderSheet()}
@@ -798,6 +926,13 @@ document.addEventListener("click",e=>{
   if(b&&A[b.dataset.a]){e.preventDefault();A[b.dataset.a](b.dataset);return}
   if(e.target.classList&&e.target.classList.contains("sheet"))A.close();
 });
+document.addEventListener("change",e=>{const t=e.target;if(!t.classList||!sheet||sheet.t!=="sch")return;
+  if(t.classList.contains("sch-s")){const b=sheet.draft[+t.dataset.k];if(!b||!TRe.test(t.value||""))return;
+    let m=Math.round(mins(t.value)/15)*15;m=Math.max(0,Math.min(SCH_END-SCH_MIN,m));b.s=m;if(b.s+b.dur>SCH_END)b.dur=Math.max(SCH_MIN,Math.floor((SCH_END-b.s)/15)*15);
+    sheet.draft=schNorm(sheet.draft);renderSheet()}
+  else if(t.classList.contains("sch-d")){const b=sheet.draft[+t.dataset.k];if(!b)return;b.dur=Math.max(SCH_MIN,+t.value||SCH_MIN);sheet.draft=schNorm(sheet.draft);renderSheet()}
+  else if(t.id==="schfrom"){if(/^\d{4}-\d{2}-\d{2}$/.test(t.value)){if(t.value<schMin()){toast("Elige una fecha desde "+shortD(schMin())+".",1);sheet.from=schMin()}else sheet.from=t.value}renderSheet()}
+});
 /* Barra de excitación: se actualiza en el lugar para que el botón se pueda arrastrar */
 function arUpd(){
   const r=$("#arr");if(!r||!sheet)return;const v=sheet.ar;
@@ -831,9 +966,9 @@ document.addEventListener("keydown",e=>{
 function renderSheet(){
   const el=$("#sh");
   if(!sheet){el.innerHTML="";return}
-  const old=el.querySelector(".panel"),sc=old?old.scrollTop:0;
-  el.innerHTML=`<div class="sheet"><div class="panel" role="dialog" aria-modal="true" aria-label="${sheet.t==="edit"?"Editar actividades":sheet.t==="set"?"Configuración":sheet.t==="cal"?"Historial":sheet.t==="proj"?"Mis proyectos":sheet.t==="arz"?"Ajustar excitación":"Registrar rendimiento"}">${sheet.t==="edit"?editorHtml():sheet.t==="set"?setHtml():sheet.t==="reg"&&sheet.sk?skipHtml():sheet.t==="cal"?calHtml():sheet.t==="proj"?projHtml():sheet.t==="arz"?arzHtml():regHtml()}</div></div>`;
-  const p=el.querySelector(".panel");if(p)p.scrollTop=sc;
+  const old=el.querySelector(".panel"),sc=old?old.scrollTop:0,olb=el.querySelector(".xbl"),slb=olb?olb.scrollTop:0;
+  el.innerHTML=`<div class="sheet"><div class="panel" role="dialog" aria-modal="true" aria-label="${sheet.t==="sch"?"Configurar horario":sheet.t==="edit"?"Editar actividades":sheet.t==="set"?"Configuración":sheet.t==="cal"?"Historial":sheet.t==="proj"?"Mis proyectos":sheet.t==="arz"?"Ajustar excitación":"Registrar rendimiento"}">${sheet.t==="edit"?editorHtml():sheet.t==="sch"?schHtml():sheet.t==="set"?setHtml():sheet.t==="reg"&&sheet.sk?skipHtml():sheet.t==="cal"?calHtml():sheet.t==="proj"?projHtml():sheet.t==="arz"?arzHtml():regHtml()}</div></div>`;
+  const p=el.querySelector(".panel");if(p)p.scrollTop=sc;const nlb=el.querySelector(".xbl");if(nlb)nlb.scrollTop=slb;if(sheet.t==="sch"&&sheet.tp)tpPos();
 }
 function swHtml(a,cur,opts,attr){return`<div class="seg xsw">${opts.map(([v,t])=>`<button type="button" class="${cur===v?"on":""}" data-a="${a}" data-v="${v}" ${attr||""} aria-pressed="${cur===v}">${t}</button>`).join("")}</div>`}
 function segHtml(a,cur){return`<div class="seg"><button type="button" class="${cur==="w"?"on":""}" data-a="${a}" data-v="w">Trabajo</button><button type="button" class="${cur==="p"?"on":""}" data-a="${a}" data-v="p">Personal</button></div>`}
@@ -935,18 +1070,76 @@ function habCard(){
 }
 const isStandalone=()=>{try{return(window.matchMedia&&matchMedia("(display-mode: standalone)").matches)||navigator.standalone===true}catch(e){return false}};
 function instBanner(){return window.__ip&&!isStandalone()?`<div class="banner" style="margin:0 0 14px"><div><div class="eyebrow">Instalar</div><b>Usa Mi rendimiento como app</b></div><button class="btn" type="button" data-a="inst">Instalar app</button></div>`:""}
+ic.clk='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>';
+const schedSum=v=>{const n=v.blocks.length;return n+" bloque"+(n===1?"":"s")+" · "+v.blocks[0].s+" – "+v.blocks[n-1].e};
+const schTomorrow=()=>{const n=new Date();return dk(new Date(n.getFullYear(),n.getMonth(),n.getDate()+1))};
+const schMin=()=>schTomorrow();
+const schNorm=d=>d.slice().sort((a,b)=>a.s-b.s||(a.id<b.id?-1:1));
+function schErr(d){return d.map((b,i)=>{
+  if(b.dur<SCH_MIN||b.dur%15)return"Dura mínimo 30 min, de 15 en 15.";
+  if(b.dur>SCH_MAXD)return"Dura máximo 2 horas.";
+  if(b.s<0||b.s+b.dur>SCH_END)return"Debe terminar a las 23:45 o antes.";
+  if(i&&d[i-1].s+d[i-1].dur>b.s)return"Se superpone con el bloque "+i+".";
+  return""})}
+const TPH=Array.from({length:12},(_,i)=>String(i+1)),TPM=["00","15","30","45"],TPP=["AM","PM"];
+function tpHtml(){const t=sheet.tp,col=(c,arr)=>`<div class="xw" data-c="${c}" role="listbox" aria-label="${c==="h"?"Hora":c==="m"?"Minutos":"AM o PM"}"><div class="xws"></div>${arr.map((x,i)=>`<div class="xwi ${t[c]===i?"on":""}" role="option" aria-selected="${t[c]===i}" data-a="tpitem" data-c="${c}" data-i="${i}">${x}</div>`).join("")}<div class="xws"></div></div>`;
+  return`<div class="eyebrow">${t.k===-1?"Nuevo bloque":"Bloque "+(t.k+1)}</div><h2 class="h2">${t.k===-1?"¿A qué hora empieza?":"Hora de inicio"}</h2>
+  <p class="lede" style="margin-top:6px">Gira cada columna: hora, minutos (de 15 en 15) y AM o PM.</p>
+  <div class="xwh"><div class="xwb"></div>${col("h",TPH)}${col("m",TPM)}${col("p",TPP)}</div>
+  ${t.k===-1?`<div class="eyebrow m" style="margin-top:18px">¿Cuánto dura?</div><div class="chips" role="group" aria-label="Duración">${[30,45,60,75,90,105,120].map(m=>`<button type="button" class="${t.dur===m?"on":""}" data-a="tpdur" data-v="${m}" aria-pressed="${t.dur===m}">${fmtDur(m)}</button>`).join("")}</div>`:""}
+  <p class="sm mut tab" style="margin-top:14px;text-align:center" id="tpsum">${tpConflict()||tpText()}</p>
+  <div class="row" style="margin-top:18px;gap:10px"><button type="button" class="btn g" data-a="tpcancel">Cancelar</button><button type="button" class="btn" style="flex:1" data-a="tpok">${t.k===-1?"Agregar bloque":"Listo"}</button></div>`}
+const tpMin=()=>{const t=sheet.tp;return(((t.h+1)%12)+(t.p?12:0))*60+t.m*15};
+const tpDurOf=()=>{const t=sheet.tp;return t.k===-1?t.dur:(sheet.draft[t.k]||{dur:0}).dur};
+const tpText=()=>{const t=sheet.tp,dur=tpDurOf(),m=tpMin();return"Empieza a las "+t12(hm(m)).toUpperCase()+(dur?" · termina a las "+t12(hm(Math.min(m+dur,1439))).toUpperCase():"")};
+function tpConflict(){const t=sheet.tp;if(t.k!==-1)return"";const m=tpMin(),e=m+t.dur;if(e>SCH_END)return"Debe terminar a las 11:45 PM o antes.";
+  const o=sheet.draft.findIndex(b=>m<b.s+b.dur&&e>b.s);return o>=0?"Se superpone con el bloque "+(o+1)+" ("+t12(hm(sheet.draft[o].s)).toUpperCase()+" – "+t12(hm(sheet.draft[o].s+sheet.draft[o].dur)).toUpperCase()+").":""}
+function tpRefresh(){const sm=document.getElementById("tpsum");if(!sm)return;const c=tpConflict();sm.textContent=c||tpText();sm.style.color=c?"var(--red)":"";sm.style.fontWeight=c?"600":""}
+function tpPos(){document.querySelectorAll(".xw").forEach(w=>{const c=w.dataset.c;w.scrollTop=(sheet.tp[c]||0)*44})}
+function schSetStart(k,m){const b=sheet.draft[k];if(!b)return;m=Math.max(0,Math.min(SCH_END-SCH_MIN,Math.round(m/15)*15));b.s=m;if(b.s+b.dur>SCH_END)b.dur=Math.max(SCH_MIN,Math.floor((SCH_END-b.s)/15)*15);sheet.draft=schNorm(sheet.draft)}
+document.addEventListener("scroll",e=>{const w=e.target;if(!w||!w.classList||!w.classList.contains("xw")||!sheet||!sheet.tp)return;
+  const c=w.dataset.c,n=w.querySelectorAll(".xwi").length,i=Math.max(0,Math.min(n-1,Math.round(w.scrollTop/44)));
+  if(sheet.tp[c]!==i){sheet.tp[c]=i;w.querySelectorAll(".xwi").forEach((x,j)=>{x.classList.toggle("on",j===i);x.setAttribute("aria-selected",String(j===i))});tpRefresh()}},true);
+function schHtml(){
+  if(sheet.tp)return tpHtml();
+  const d=sheet.draft,er=schErr(d),bad=er.some(Boolean),tot=d.reduce((n,b)=>n+b.dur,0),n=d.length;
+  const lo0=n?d[0].s:420,hi0=n?Math.max(...d.map(b=>b.s+b.dur)):960;
+  const lo=Math.floor(lo0/60)*60;let hi=Math.ceil(hi0/60)*60;if(hi-lo<180)hi=Math.min(1440,lo+180);const span=hi-lo,sh=span>18*60?3:span>9*60?2:1;
+  let tk="";for(let q=lo/60;q<=hi/60;q+=sh)tk+=`<span style="left:${(q*60-lo)/span*100}%">${pad(q)}</span>`;
+  const segs=d.map((b,i)=>{const w=b.dur/span*100;return`<i class="${er[i]?"bad":""}" style="left:${(b.s-lo)/span*100}%;width:${w}%" title="Bloque ${i+1}: ${hm(b.s)} – ${hm(b.s+b.dur)}">${w>=4.5?i+1:""}</i>`}).join("");
+  const opts=cur=>{let o="";const set=new Set();for(let m=SCH_MIN;m<=SCH_MAXD;m+=15)set.add(m);if(cur>=SCH_MIN&&cur<=SCH_MAXD)set.add(cur);return[...set].sort((a,b)=>a-b).map(m=>`<option value="${m}" ${m===cur?"selected":""}>${fmtDur(m)}</option>`).join("")};
+  const vers=allV().slice().reverse().slice(0,6).map(v=>`<li><b>${v.id==="v0"?"Horario original":"Desde "+shortD(v.from)}</b><span>${schedSum(v)}</span></li>`).join("");
+  return`<div class="row"><div><div class="eyebrow">Mi jornada</div><h2 class="h2">Configurar horario</h2></div><button type="button" class="btn g sm" data-a="close">Cerrar</button></div>
+  <p class="lede" style="margin-top:8px">Cada vez que guardas se crea una <b>nueva versión</b> del horario. Tus registros anteriores conservan su horario original y no se modifican.</p>
+  <div class="xsum"><b>${n} bloque${n===1?"":"s"}</b><span>${n?hm(d[0].s)+" – "+hm(Math.max(...d.map(b=>b.s+b.dur)))+" · "+fmtDur(tot)+" en bloques":"Sin bloques"}</span></div>
+  <div class="xtl" role="img" aria-label="Distribución de tu jornada"><div class="xtb">${segs}</div><div class="xta">${tk}</div></div>
+  <div class="xbl" role="list">${d.map((b,i)=>`<div class="xbr ${er[i]?"bad":""}" role="listitem"><span class="bn">${i+1}</span>
+    <div class="xf"><span>Inicio</span><button type="button" class="xtm" data-a="tpopen" data-k="${i}" aria-label="Inicio del bloque ${i+1}: ${t12(hm(b.s))}. Toca para cambiar">${t12(hm(b.s)).toUpperCase()}</button></div>
+    <label class="xf"><span>Duración</span><select class="sch-d" data-k="${i}" aria-label="Duración del bloque ${i+1}">${opts(b.dur)}</select></label>
+    <button type="button" class="ib" data-a="schdel" data-k="${i}" aria-label="Eliminar bloque ${i+1}">${ic.tr}</button>
+    <p class="xbe">${er[i]?esc(er[i]):"Termina a las "+hm(b.s+b.dur)}</p></div>`).join("")||'<p class="mut sm" style="padding:12px">Aún no hay bloques. Añade el primero.</p>'}</div>
+  <button type="button" class="btn g" style="width:100%;margin-top:10px" data-a="schadd" ${n>=SCH_MAX?"disabled":""}>Añadir bloque</button>
+  <div class="xsec"><label class="eyebrow m" for="schfrom">Aplicar desde</label>
+  <input type="date" class="na" id="schfrom" value="${sheet.from}" min="${schMin()}" style="width:100%;margin-top:8px">
+  <p class="sm mut" style="margin-top:6px">${sheet.from===schTomorrow()?"Empieza mañana, así el día de hoy no se mezcla.":"Empieza el "+shortD(sheet.from)+"."} Hoy y los días anteriores siguen con su horario.</p></div>
+  <div class="row" style="margin-top:18px;gap:10px"><button type="button" class="btn g" data-a="close">Cancelar</button><button type="button" class="btn" style="flex:1" data-a="schsave" ${bad||!n?"disabled":""}>Guardar horario</button></div>
+  ${bad?'<p class="sm" style="color:var(--red);margin-top:8px">Corrige los bloques marcados para guardar.</p>':""}
+  <details class="xvs"><summary>Versiones del horario (${allV().length})</summary><ul>${vers}</ul></details>`;
+}
+function schedBtn(){const t=dk(new Date()),v=verFor(t),pend=allV().filter(x=>x.from>t).pop();
+  return`<button type="button" class="xsch" data-a="schopen" aria-label="Configurar horario. ${schedSum(v)}"><span class="xsi">${ic.clk}</span><span class="xst"><b>Configurar horario</b><span>${schedSum(v)}${pend?" · nuevo horario desde "+shortD(pend.from):""}</span></span><span class="xsc">${ic.chr}</span></button>`}
 function hoy(){
   const now=new Date(),t=dk(now);
   const wd=cap(now.toLocaleDateString("es-CO",{weekday:"long"})),dm=now.toLocaleDateString("es-CO",{day:"numeric",month:"long",year:"numeric"});
-  const rs=B.map((_,i)=>logs[id(t,i)]),n=rs.filter(r=>r&&!r.sk).length,nsk=rs.filter(r=>r&&r.sk).length,pm=mean(rs.filter(r=>r&&!r.sk).map(r=>r.lv));
+  syncB();const rs=B.map((_,i)=>logs[id(t,i)]),n=rs.filter(r=>r&&!r.sk).length,nsk=rs.filter(r=>r&&r.sk).length,pm=mean(rs.filter(r=>r&&!r.sk).map(r=>r.lv));
   let h=instBanner()+focoCard()+`<div class="eyebrow" style="margin-top:26px">Hoy</div><h1 class="big">${wd}<span>${dm}</span></h1>`;
   h+=habMini();
   const pend=B.map((_,i)=>i).filter(i=>st(i)==="done"&&!logs[id(t,i)]);
   if(pend.length){const i=pend[pend.length-1];h+=`<div class="banner"><div><div class="eyebrow">Bloque ${i+1} terminó</div><b>¿Cómo fue tu rendimiento?</b></div><button class="btn" type="button" data-a="open" data-d="${t}" data-i="${i}">Registrar ahora</button></div>`}
   h+=sunBanner();
-  h+=`<div class="eyebrow" style="margin-top:30px">Bloques de hoy</div>
-  <div class="meter" role="img" aria-label="${n} de 5 bloques registrados">${rs.map(r=>`<i style="background:${r&&!r.sk?`var(--lv${r.lv})`:r&&r.sk?"var(--mut)":"var(--line)"}${r&&r.sk?";opacity:.45":""}"></i>`).join("")}</div>
-  <p class="sm mut tab" style="margin-top:8px">${n} de 5 bloques registrados${n?` · promedio ${f1(pm)} de 3`:""}${nsk?` · ${nsk} sin trabajar`:""}</p><div style="margin-top:14px">`;
+  h+=`<div class="eyebrow" style="margin-top:30px">Bloques de hoy</div>${schedBtn()}
+  <div class="meter" role="img" aria-label="${n} de ${B.length} bloques registrados">${rs.map(r=>`<i style="background:${r&&!r.sk?`var(--lv${r.lv})`:r&&r.sk?"var(--mut)":"var(--line)"}${r&&r.sk?";opacity:.45":""}"></i>`).join("")}</div>
+  <p class="sm mut tab" style="margin-top:8px">${n} de ${B.length} bloques registrados${n?` · promedio ${f1(pm)} de 3`:""}${nsk?` · ${nsk} sin trabajar`:""}</p><div style="margin-top:14px">`;
   B.forEach((_,i)=>{
     const s=st(i),r=rs[i],k=id(t,i);
     if(r&&r.sk){h+=`<div class="card blk tl sk"><div class="row"><div class="bh"><span class="bn">${i+1}</span><div><div class="n">Bloque ${i+1}</div><div class="r tab">${rng(i)}</div></div></div><span class="chip">No trabajé</span></div>
@@ -958,13 +1151,15 @@ function hoy(){
     else if(s==="act")h+=`<button class="link" type="button" data-a="open" data-d="${t}" data-i="${i}" style="text-align:left">Registrar antes de que termine</button>`;
     h+=`</div>`;
   });
-  return h+`</div>`+histBtn();
+  h+=`</div>`;const ex=extras(t);
+  if(ex.length)h+=`<div class="card" style="margin-top:12px"><div class="eyebrow m">Registros con el horario anterior</div><p class="sm mut" style="margin-top:6px">Los hiciste hoy antes de cambiar tu horario. Se conservan tal como estaban.</p><div class="dd" style="margin-top:6px">${extraRows(ex,true)}</div></div>`;
+  return h+histBtn();
 }
 
 /* ---------- Análisis ---------- */
 function dayPerf(){const m={};recs().forEach(r=>(m[r.date]=m[r.date]||[]).push(r.lv));return m}
 function best(map,minN,dir){let k=null,v=dir>0?-1:9;for(const x in map){const a=map[x];if(a.length<minN)continue;const m=mean(a);if(dir>0?m>v:m<v){v=m;k=x}}return k===null?null:{k,v,n:map[k].length}}
-const INC={"Tu mejor bloque":"grn","Tu bloque más flojo":"org","Tu mejor día":"grn","Actividad que mejor te rinde":"pur","Tu hábito más poderoso":"grn","Casi no cambia tu rendimiento":"org","El que más se te escapa":"red","Tu pico estimado":"pur"};
+const INC={"Tu mejor franja":"grn","Tu franja más floja":"org","Tu mejor día":"grn","Actividad que mejor te rinde":"pur","Tu hábito más poderoso":"grn","Casi no cambia tu rendimiento":"org","El que más se te escapa":"red","Tu pico estimado":"pur"};
 const insC=(k,t)=>INC[k]?`var(--${INC[k]})`:/\(sube\)/.test(t)?"var(--grn)":/\(baja\)/.test(t)?"var(--red)":"var(--ac)";
 const ins=(k,t,s)=>`<div class="ins"><div class="eyebrow m k"><i style="background:${insC(k,t)}"></i>${k}</div><div class="t">${t}</div><div class="s">${s}</div></div>`;
 const secH=(e,t,l)=>`<div class="sec"><div class="eyebrow">${e}</div><h2 class="h2">${t}</h2>${l?`<p class="lede">${l}</p>`:""}</div>`;
@@ -1001,28 +1196,30 @@ function trendSvg(days,dp,withHab){
   return s+`</svg>`;
 }
 
-function blockBars(byB){
-  const W=340,pl=34,pr=12,sw=(W-pl-pr)/5,bw=Math.min(40,sw-14),y=v=>112-v/3*88;
-  let s=`<svg class="sv" viewBox="0 0 ${W} 150" role="img" aria-label="Promedio de rendimiento por bloque">`;
+function hourBars(byH,H){
+  const pl=34,pr=12,sw=Math.max(32,Math.min(54,(340-pl-pr)/H.length)),W=pl+pr+sw*H.length,bw=Math.min(34,sw-8),y=v=>112-v/3*88;
+  let s=`<svg class="sv" viewBox="0 0 ${W} 150" style="min-width:${W}px" role="img" aria-label="Promedio de rendimiento por franja de 2 horas">`;
   [[1,"Bajo"],[2,"Alto"],[3,"Máx"]].forEach(([v,l])=>{s+=`<line class="sv-g" x1="${pl-4}" x2="${W-pr}" y1="${y(v)}" y2="${y(v)}" ${v===2?'stroke-dasharray="3 4"':""}/><text class="sv-t" x="0" y="${y(v)+3}">${l}</text>`});
   s+=`<line class="sv-g" x1="${pl-4}" x2="${W-pr}" y1="112" y2="112"/>`;
-  for(let i=0;i<5;i++){
-    const a=byB[i+1],cx=pl+sw*i+sw/2;
-    if(a){const m=mean(a);s+=`<rect x="${cx-bw/2}" y="${y(m)}" width="${bw}" height="${112-y(m)}" rx="6" style="fill:var(--lv${Math.round(m)})"><title>Bloque ${i+1}: ${f1(m)} (${a.length} registro${a.length>1?"s":""})</title></rect><text class="sv-v" x="${cx}" y="${y(m)-6}" text-anchor="middle">${f1(m)}</text>`}
+  H.forEach((h,i)=>{
+    const o=byH[h],cx=pl+sw*i+sw/2;
+    if(o){const m=o.s/o.w;s+=`<rect x="${cx-bw/2}" y="${y(m)}" width="${bw}" height="${112-y(m)}" rx="6" style="fill:var(--lv${Math.round(m)})"><title>${slotTxt(h)}: ${f1(m)} (${o.n} registro${o.n>1?"s":""})</title></rect><text class="sv-v" x="${cx}" y="${y(m)-6}" text-anchor="middle">${f1(m)}</text>`}
     else s+=`<text class="sv-t" x="${cx}" y="106" text-anchor="middle">–</text>`;
-    s+=`<text class="sv-v" x="${cx}" y="128" text-anchor="middle" style="font-size:10px">B${i+1}</text><text class="sv-t" x="${cx}" y="141" text-anchor="middle">${t12(B[i][0]).replace(":00","").replace(" ","")}</text>`;
-  }
+    s+=`<text class="sv-v" x="${cx}" y="128" text-anchor="middle" style="font-size:10px">${slotLbl(h)}</text><text class="sv-t" x="${cx}" y="141" text-anchor="middle">${slotAp(h)}</text>`;
+  });
   return s+`</svg>`;
 }
+const bestO=(m,minN,dir)=>{let k=null,v=dir>0?-1:9;for(const x in m){const o=m[x];if(o.n<minN)continue;const q=o.s/o.w;if(dir>0?q>v:q<v){v=q;k=x}}return k===null?null:{k,v,n:m[k].n}};
 function anR(){
   const R=recs();
   if(!R.length)return emptyBox("Aún no hay datos","Registra tu primer bloque en la pestaña Hoy y aquí aparecerá el análisis.");
-  const minN=R.length<15?1:2,byB={},byD={},byA={},grid={},byDate=dayPerf();
+  const minN=R.length<15?1:2,byB={},byD={},byA={},grid={},byDate=dayPerf();let noT=0;
+  const add=(m,k,ov,lv)=>{const o=m[k]=m[k]||{w:0,s:0,n:0};o.w+=ov;o.s+=ov*lv;o.n++};
   R.forEach(r=>{
-    (byB[r.b]=byB[r.b]||[]).push(r.lv);
     const w=wdOf(r.date);(byD[w]=byD[w]||[]).push(r.lv);
     if(r.act)(byA[r.act]=byA[r.act]||[]).push(r.lv);
-    (grid[w+"_"+r.b]=grid[w+"_"+r.b]||[]).push(r.lv);
+    const x=rinfo(r);if(!x){noT++;return}
+    slotSplit(x,(hh,ov)=>{add(byB,hh,ov,r.lv);add(grid,w+"_"+hh,ov,r.lv)});
   });
   const all=R.map(r=>r.lv),mx=all.filter(x=>x===3).length,nDays=Object.keys(byDate).length;
   let h=`<div class="kpis">
@@ -1030,10 +1227,10 @@ function anR(){
    <div class="kpi k2"><span class="eyebrow m">Promedio</span><b class="tab">${f1(mean(all))}<small> / 3</small></b><p>1 es Bajo, 3 es Máximo</p></div>
    <div class="kpi k3"><span class="eyebrow m">Máximo</span><b class="tab">${Math.round(mx/R.length*100)}<small>%</small></b><p>de tus bloques</p></div></div>`;
   /* Hallazgos */
-  const bb=best(byB,minN,1),wb=best(byB,minN,-1),bd=best(byD,minN,1),ba=best(byA,minN,1);
+  const bb=bestO(byB,minN,1),wb=bestO(byB,minN,-1),bd=best(byD,minN,1),ba=best(byA,minN,1);
   let cards="";
-  if(bb)cards+=ins("Tu mejor bloque",`Bloque ${bb.k} · ${rng(bb.k-1)}`,`Promedio ${f1(bb.v)} en ${bb.n} registro${bb.n>1?"s":""}. Aquí conviene poner el trabajo que más exige tu cabeza.`);
-  if(wb&&bb&&wb.k!==bb.k)cards+=ins("Tu bloque más flojo",`Bloque ${wb.k} · ${rng(wb.k-1)}`,`Promedio ${f1(wb.v)}. Sirve para tareas livianas como correos, orden o seguimiento.`);
+  if(bb)cards+=ins("Tu mejor franja",slotTxt(+bb.k),`Promedio ${f1(bb.v)} en ${bb.n} registro${bb.n>1?"s":""}. Aquí conviene poner el trabajo que más exige tu cabeza.`);
+  if(wb&&bb&&wb.k!==bb.k)cards+=ins("Tu franja más floja",slotTxt(+wb.k),`Promedio ${f1(wb.v)}. Sirve para tareas livianas como correos, orden o seguimiento.`);
   if(bd)cards+=ins("Tu mejor día",cap(DNL[bd.k]),`Promedio ${f1(bd.v)} en ${bd.n} registro${bd.n>1?"s":""}.`);
   if(ba)cards+=ins("Actividad que mejor te rinde",esc(ba.k),`Promedio ${f1(ba.v)} en ${ba.n} registro${ba.n>1?"s":""}. Prográmala en tus mejores bloques.`);
   const bw=R.filter(r=>catOf(r)==="w").map(r=>r.lv),bp=R.filter(r=>catOf(r)==="p").map(r=>r.lv);
@@ -1045,18 +1242,20 @@ function anR(){
     if(a.length&&b.length){const dl=mean(a)-mean(b);cards+=ins("Últimos 7 días",`${f1(mean(a))} ${dl>=0.05?"(sube)":dl<=-0.05?"(baja)":"(igual)"}`,`${dl>=0?"+":""}${dl.toFixed(1)} frente a los 7 días anteriores (${f1(mean(b))}).`)}
   }
   h+=secH("Hallazgos","Lo que muestran tus datos",R.length<15?"Con pocos registros las conclusiones son tentativas. Apunta a unos 3 o más por casilla antes de reorganizar tu día.":"")+`<div class="ins-g">${cards}</div>`;
-  /* Mapa de calor */
-  const days=[1,2,3,4,5,6,0].filter(w=>w!==0||byD[0]);
-  let ht=`<div class="heat"><span></span>${B.map((_,i)=>`<span class="hc">B${i+1}<br>${t12(B[i][0]).replace(":00","").replace(" ","")}</span>`).join("")}<span class="hc">Día</span>`;
-  days.forEach(w=>{
-    ht+=`<span class="hr">${DN[w]}</span>`;
-    B.forEach((_,i)=>{const a=grid[w+"_"+(i+1)];ht+=a?`<span class="cell tab" style="${heat(mean(a))}" title="${DN[w]} bloque ${i+1}: ${f1(mean(a))} (${a.length})">${f1(mean(a))}<small>n=${a.length}</small></span>`:`<span class="cell e">–</span>`});
-    const dv=byD[w];ht+=dv?`<span class="cell p tab">${f1(mean(dv))}</span>`:`<span class="cell e">–</span>`;
+  /* Mapa de calor por franja horaria: días en horizontal, franjas en vertical */
+  const days=[1,2,3,4,5,6,0];
+  const hk=Object.keys(byB).map(Number),hLo=Math.min(4,...hk),hHi=Math.max(20,...hk),H=[];for(let q=hLo;q<=hHi;q+=2)H.push(q);
+  const mv=o=>o.s/o.w;
+  let ht=`<div class="heatw"><div class="heat t" style="grid-template-columns:42px repeat(7,minmax(0,1fr)) 40px"><span></span>${days.map(w=>`<span class="hc">${DN[w]}</span>`).join("")}<span class="hc">Prom.</span>`;
+  H.forEach(q=>{
+    ht+=`<span class="hr">${slotLbl(q)}<small>${slotAp(q)}</small></span>`;
+    days.forEach(w=>{const a=grid[w+"_"+q];ht+=a?`<span class="cell tab" style="${heat(mv(a))}" title="${DNL[w]} ${slotTxt(q)}: ${f1(mv(a))} (${a.n} registro${a.n>1?"s":""})">${f1(mv(a))}<small>n=${a.n}</small></span>`:`<span class="cell e">–</span>`});
+    ht+=byB[q]?`<span class="cell p tab">${f1(mv(byB[q]))}</span>`:`<span class="cell e">–</span>`;
   });
-  ht+=`<span class="hr">Prom.</span>${B.map((_,i)=>byB[i+1]?`<span class="cell p tab">${f1(mean(byB[i+1]))}</span>`:`<span class="cell e">–</span>`).join("")}<span class="cell p tab" style="border-color:var(--ac)">${f1(mean(all))}</span></div>`;
-  h+=secH("Mapa","Tu semana por día y bloque","Busca los cuadros más oscuros: son tus mejores momentos. Abajo y a la derecha ves los promedios.")+`<div class="card" style="margin-top:14px">${ht}<div class="scale"><span>Bajo</span><i style="background:linear-gradient(90deg,color-mix(in srgb,var(--ac) 12%,var(--bg2)),var(--ac))"></i><span>Máximo</span></div></div>`;
-  /* Promedio por bloque */
-  h+=secH("Bloques","Tu promedio en cada bloque","Altura de cada barra: promedio de 1 (Bajo) a 3 (Máximo). El color es el nivel más cercano.")+`<div class="card" style="margin-top:14px"><div class="svgw">${blockBars(byB)}</div></div>`;
+  ht+=`<span class="hr">Prom.</span>${days.map(w=>{const dv=byD[w];return dv?`<span class="cell p tab">${f1(mean(dv))}</span>`:`<span class="cell e">–</span>`}).join("")}<span class="cell p tab" style="border-color:var(--ac)">${f1(mean(all))}</span></div></div>`;
+  h+=secH("Mapa","Tu semana por día y franja de 2 horas","Cada fila son 2 horas reales del día (por ejemplo 8 a 10) y cada columna un día. Busca los cuadros más oscuros: son tus mejores momentos. Un guion significa que no hay datos ahí, no que rendiste cero.")+`<div class="card" style="margin-top:14px">${ht}<div class="scale"><span>Bajo</span><i style="background:linear-gradient(90deg,color-mix(in srgb,var(--ac) 12%,var(--bg2)),var(--ac))"></i><span>Máximo</span></div></div>`;
+  /* Promedio por franja */
+  h+=secH("Franjas","Tu promedio en cada franja de 2 horas","Altura de cada barra: promedio de 1 (Bajo) a 3 (Máximo) en tramos de 2 horas. Si un bloque cruza dos franjas, cuenta en cada una según los minutos que le tocan. Sin barra = sin datos."+(noT?` ${noT} registro${noT>1?"s":""} antiguo${noT>1?"s":""} sin horario recuperable no entra${noT>1?"n":""} aquí.`:""))+`<div class="card" style="margin-top:14px"><div class="svgw">${hourBars(byB,H)}</div></div>`;
   /* Actividades */
   const rows=Object.keys(byA).map(k=>{const rr=R.filter(r=>r.act===k);return{k,a:byA[k],c:catOf(rr[0]),v:mean(byA[k])}}).filter(o=>actF==="all"||o.c===actF).sort((a,b)=>b.v-a.v);
   let ab=`<div style="margin-top:14px">${[["all","Todas"],["w","Trabajo"],["p","Personal"]].map(([k,n])=>`<button type="button" data-a="actf" data-v="${k}" class="chip ${actF===k?"act":""}" style="margin-right:6px;min-height:36px">${n}</button>`).join("")}</div>`;
@@ -1277,7 +1476,7 @@ function se(){
     const all=R.map(r=>r.lv),avg=mean(all),pa=PR.length?mean(PR.map(r=>r.lv)):null,dl=pa==null?null:avg-pa,mx=all.filter(x=>x===3).length;
     h+=secH("Informe","Tu rendimiento de la semana");
     h+=`<div class="kpis"><div class="kpi k2"><span class="eyebrow m">Promedio</span><b class="tab">${f1(avg)}<small> / 3</small></b><p>${dl==null?"Primera semana con datos":(dl>=0?"+":"")+dl.toFixed(1)+" frente a la anterior"}</p></div>
-     <div class="kpi"><span class="eyebrow m">Registros</span><b class="tab">${R.length}<small> / 35</small></b><p>bloques registrados</p></div>
+     <div class="kpi"><span class="eyebrow m">Registros</span><b class="tab">${R.length}<small> / ${wd.reduce((n,d)=>n+bl(d).length,0)}</small></b><p>bloques registrados</p></div>
      <div class="kpi k3"><span class="eyebrow m">Máximo</span><b class="tab">${Math.round(mx/R.length*100)}<small>%</small></b><p>de tus bloques</p></div></div>`;
     const cnt=[1,2,3].map(n=>all.filter(x=>x===n).length);
     h+=`<div class="card" style="margin-top:12px"><div class="eyebrow m">Cómo se repartió</div><div class="trk" style="height:22px;margin-top:12px">${[1,2,3].map((n,i)=>cnt[i]?`<i style="width:${cnt[i]/R.length*100}%;background:var(--lv${n})" title="${L[n].n}: ${cnt[i]}"></i>`:"").join("")}</div>
@@ -1289,23 +1488,24 @@ function se(){
     if(names.length){
       const perf=names.map(k=>({k,v:mean(byA[k]),n:byA[k].length})).sort((a,b)=>b.v-a.v||b.n-a.n);
       h+=secH("Por tarea","Cómo te fue en cada tarea","Promedio de 3 en cada tarea. El color indica el nivel.")+`<div class="card" style="margin-top:14px">${perf.map(o=>`<div class="bar w"><span class="nm" title="${esc(o.k)}">${esc(o.k)}</span><div class="trk"><i style="width:${o.v/3*100}%;background:var(--lv${Math.round(o.v)})"></i></div><span class="v tab">${f1(o.v)} <small>${L[Math.round(o.v)].n}</small></span></div>`).join("")}</div>`;
-      const top=names.map(k=>({k,n:byA[k].length})).sort((a,b)=>b.n-a.n).slice(0,8),mxn=top[0].n;
-      h+=secH("Más hechas","Las tareas que más hiciste","Cada bloque son 1,5 horas.")+`<div class="card" style="margin-top:14px">${top.map(o=>`<div class="bar w2"><span class="nm" title="${esc(o.k)}">${esc(o.k)}</span><div class="trk"><i class="one" style="width:${o.n/mxn*100}%"></i></div><span class="v tab">${o.n} <small>· ${(o.n*1.5).toString().replace(".",",")} h</small></span></div>`).join("")}${noA?`<p class="sm mut" style="margin-top:12px">${noA} bloque${noA>1?"s":""} sin actividad marcada.</p>`:""}</div>`;
+      const hA={};R.forEach(r=>{if(r.act){const x=rinfo(r);if(x)hA[r.act]=(hA[r.act]||0)+x.dur}});const top=names.map(k=>({k,n:byA[k].length})).sort((a,b)=>b.n-a.n).slice(0,8),mxn=top[0].n;
+      h+=secH("Más hechas","Las tareas que más hiciste","Las horas se calculan con la duración real de cada bloque.")+`<div class="card" style="margin-top:14px">${top.map(o=>`<div class="bar w2"><span class="nm" title="${esc(o.k)}">${esc(o.k)}</span><div class="trk"><i class="one" style="width:${o.n/mxn*100}%"></i></div><span class="v tab">${o.n} <small>· ${fmtH(hA[o.k]||0)}</small></span></div>`).join("")}${noA?`<p class="sm mut" style="margin-top:12px">${noA} bloque${noA>1?"s":""} sin actividad marcada.</p>`:""}</div>`;
     }else h+=`<p class="sm mut" style="margin-top:14px">Marca la actividad al registrar un bloque para ver el desglose por tarea.</p>`;
   }
   /* calendario por bloques */
-  h+=secH("Calendario","Tu rendimiento en cada bloque","Cada cuadro es un bloque. La letra es el nivel: B de Bajo, A de Alto y M de Máximo. Toca un día para ver qué hiciste.");
-  h+=`<div class="card" style="margin-top:14px"><div class="wg"><span></span>${wd.map(d=>`<span class="hc">${DN[wdOf(d)]}<br>${+d.slice(8)}</span>`).join("")}${B.map((_,i)=>`<span class="hr">B${i+1}</span>`+wd.map(d=>{const r=logs[id(d,i)];return r&&r.lv>=1&&r.lv<=3?`<span class="wcell l${r.lv}" title="${esc(r.act||"Sin actividad")}">${L[r.lv].n.charAt(0)}</span>`:`<span class="wcell">·</span>`}).join("")).join("")}</div></div>`;
+  h+=secH("Calendario","Tu rendimiento en cada bloque","Cada cuadro es un bloque de ese día. La letra es el nivel: B de Bajo, A de Alto y M de Máximo. Toca un día para ver qué hiciste.");
+  h+=`<div class="card" style="margin-top:14px"><div class="wg"><span></span>${wd.map(d=>`<span class="hc">${DN[wdOf(d)]}<br>${+d.slice(8)}</span>`).join("")}${Array.from({length:Math.max(...wd.map(d=>bl(d).length))},(_,i)=>`<span class="hr">B${i+1}</span>`+wd.map(d=>{if(i>=bl(d).length)return`<span class="wcell n"></span>`;const r=logs[id(d,i)];return r&&r.lv>=1&&r.lv<=3?`<span class="wcell l${r.lv}" title="${rtxt(r,d,i)} · ${esc(r.act||"Sin actividad")}">${L[r.lv].n.charAt(0)}</span>`:`<span class="wcell" title="${rngD(d,i)}">·</span>`}).join("")).join("")}</div></div>`;
   if(R.length){
-    const byB={};R.forEach(r=>(byB[r.b]=byB[r.b]||[]).push(r.lv));
-    h+=`<div class="card" style="margin-top:12px"><div class="eyebrow m">Cómo se reparte cada bloque</div><p class="sm mut" style="margin-top:6px">Qué parte de cada bloque fue Bajo, Alto o Máximo esta semana. A la derecha, el promedio.</p><div class="leg">${[1,2,3].map(n=>`<span><i style="background:var(--lv${n})"></i>${L[n].n}</span>`).join("")}</div>${B.map((_,i)=>{const a=byB[i+1]||[];return`<div class="bar"><span class="nm">Bloque ${i+1}</span><div class="trk">${a.length?[1,2,3].map(n=>{const c=a.filter(x=>x===n).length;return c?`<i style="width:${c/a.length*100}%;background:var(--lv${n})" title="${L[n].n}: ${c}"></i>`:""}).join(""):""}</div><span class="v tab">${a.length?f1(mean(a)):"–"}</span></div>`}).join("")}</div>`;
+    const kb={};R.forEach(r=>{const x=rinfo(r);if(!x)return;const k=x.v+"|"+x.bk;(kb[k]=kb[k]||{x,a:[]}).a.push(r.lv)});
+    const kl=Object.values(kb).sort((p,q)=>p.x.sm-q.x.sm||p.x.em-q.x.em),vs=new Set(kl.map(o=>o.x.v)),vn=v=>allV().findIndex(z=>z.id===v)+1;
+    if(kl.length)h+=`<div class="card" style="margin-top:12px"><div class="eyebrow m">Cómo se reparte cada bloque</div><p class="sm mut" style="margin-top:6px">Qué parte de cada bloque fue Bajo, Alto o Máximo esta semana. A la derecha, el promedio.${vs.size>1?" Los bloques se separan por versión del horario; no se mezclan aunque tengan el mismo número.":""}</p><div class="leg">${[1,2,3].map(n=>`<span><i style="background:var(--lv${n})"></i>${L[n].n}</span>`).join("")}</div>${kl.map(({x,a})=>`<div class="bar w"><span class="nm" title="${x.s} – ${x.e}${vs.size>1?" · horario "+vn(x.v):""}">${x.s}–${x.e}${vs.size>1?" · H"+vn(x.v):""}</span><div class="trk">${[1,2,3].map(n=>{const c=a.filter(z=>z===n).length;return c?`<i style="width:${c/a.length*100}%;background:var(--lv${n})" title="${L[n].n}: ${c}"></i>`:""}).join("")}</div><span class="v tab">${f1(mean(a))}</span></div>`).join("")}</div>`;
   }
   wd.forEach(d=>{
     if(d>today)return;
-    const rows=B.map((_,i)=>({i,r:logs[id(d,i)]})),c=rows.filter(o=>o.r&&o.r.lv>=1&&o.r.lv<=3).length;
+    const rows=bl(d).map((_,i)=>({i,r:logs[id(d,i)]})),c=rows.filter(o=>o.r&&o.r.lv>=1&&o.r.lv<=3).length+extras(d).filter(o=>o.r.lv>=1&&o.r.lv<=3).length;
     if(!c){h+=`<div class="dd empty-d"><div class="row"><b style="font-weight:800">${longDate(d)}</b><span class="chip">Sin registros</span></div></div>`;return}
     const o=!!wkOpen[d];
-    h+=`<section class="dd"><button type="button" class="dacc${o?" o":""}" data-a="wkd" data-d="${d}" aria-expanded="${o}"><span class="t"><h3>${longDate(d)}</h3><span class="sub tab">${c} de 5 bloques registrados</span></span><span class="ps" aria-hidden="true">${rows.map(({r})=>`<i class="${r&&r.lv>=1&&r.lv<=3?"l"+r.lv:""}"></i>`).join("")}</span>${ic.chr}</button>${o?rows.map(({i,r})=>r&&r.lv>=1&&r.lv<=3?`<div class="dr"><span class="bn l${r.lv}">${i+1}</span><div class="tx"><b>${esc(r.act||"Sin actividad")}</b><span class="tab">${rng(i)}${r.ar?" · "+AR[r.ar].s:""}</span></div>${pill(r.lv)}</div>`:`<div class="dr no"><span class="bn">${i+1}</span><div class="tx"><b>${r&&r.sk?"No trabajé":"Sin registro"}</b><span class="tab">${rng(i)}${r&&r.sk&&r.why?" · "+esc(r.why):""}</span></div></div>`).join(""):""}</section>`;
+    h+=`<section class="dd"><button type="button" class="dacc${o?" o":""}" data-a="wkd" data-d="${d}" aria-expanded="${o}"><span class="t"><h3>${longDate(d)}</h3><span class="sub tab">${c} de ${rows.length} bloques registrados</span></span><span class="ps" aria-hidden="true">${rows.map(({r})=>`<i class="${r&&r.lv>=1&&r.lv<=3?"l"+r.lv:""}"></i>`).join("")}</span>${ic.chr}</button>${o?rows.map(({i,r})=>r&&r.lv>=1&&r.lv<=3?`<div class="dr"><span class="bn l${r.lv}">${i+1}</span><div class="tx"><b>${esc(r.act||"Sin actividad")}</b><span class="tab">${rtxt(r,d,i)}${r.ar?" · "+AR[r.ar].s:""}</span></div>${pill(r.lv)}</div>`:`<div class="dr no"><span class="bn">${i+1}</span><div class="tx"><b>${r&&r.sk?"No trabajé":"Sin registro"}</b><span class="tab">${rtxt(r,d,i)}${r&&r.sk&&r.why?" · "+esc(r.why):""}</span></div></div>`).join("")+extraRows(extras(d),false):""}</section>`;
   });
   return h;
 }
@@ -1317,34 +1517,35 @@ function histBtn(){
 }
 function calHtml(){
   const[y,mo]=sheet.m.split("-").map(Number),today=dk(new Date()),curM=today.slice(0,7);
-  const by={};recs().forEach(r=>{(by[r.date]=by[r.date]||{})[r.b]=r.lv});
+  const by={};recs().forEach(r=>{(by[r.date]=by[r.date]||[]).push(r)});
   const first=new Date(y,mo-1,1),lead=(first.getDay()+6)%7,nd=new Date(y,mo,0).getDate();
   const title=cap(first.toLocaleDateString("es-CO",{month:"long",year:"numeric"}));
   let mr=0,md=0,sum=0,hd=0;
-  for(let i=1;i<=nd;i++){const d=sheet.m+"-"+pad(i),x=by[d];if(x){const v=Object.values(x);mr+=v.length;md++;sum+=v.reduce((p,q)=>p+q,0)}
+  for(let i=1;i<=nd;i++){const d=sheet.m+"-"+pad(i),x=by[d];if(x){const v=x.map(r=>r.lv);mr+=v.length;md++;sum+=v.reduce((p,q)=>p+q,0)}
     const hv=habs[d];if(hv&&HAB.some(k=>hv[k.k]!==undefined))hd++}
   let g="";
   for(let i=0;i<lead;i++)g+=`<span class="cd out" aria-hidden="true"></span>`;
   for(let i=1;i<=nd;i++){
-    const d=sheet.m+"-"+pad(i),x=by[d]||{},c=Object.keys(x).length,hv=habs[d],hh=hv&&HAB.some(k=>hv[k.k]!==undefined),fut=d>today;
-    g+=`<button type="button" class="cd${c?" has":""}${d===today?" td":""}${d===sheet.sel?" sel":""}${fut?" fut":""}" data-a="calsel" data-d="${d}" ${fut?"disabled":""} aria-pressed="${d===sheet.sel}" aria-label="${longDate(d)}: ${c} de 5 registros">${hh?'<i class="hb"></i>':""}<span class="dn">${i}</span><span class="ps">${[1,2,3,4,5].map(b=>`<i class="${x[b]?"l"+x[b]:""}"></i>`).join("")}</span><span class="ct">${c?c+"/5":"–"}</span></button>`;
+    const d=sheet.m+"-"+pad(i),x=by[d]||[],c=x.length,hv=habs[d],hh=hv&&HAB.some(k=>hv[k.k]!==undefined),fut=d>today;
+    g+=`<button type="button" class="cd${c?" has":""}${d===today?" td":""}${d===sheet.sel?" sel":""}${fut?" fut":""}" data-a="calsel" data-d="${d}" ${fut?"disabled":""} aria-pressed="${d===sheet.sel}" aria-label="${longDate(d)}: ${c} de ${bl(d).length} registros">${hh?'<i class="hb"></i>':""}<span class="dn">${i}</span><span class="ps">${bl(d).map((_,b)=>{const r=logs[id(d,b)];return`<i class="${r&&r.lv>=1?"l"+r.lv:""}"></i>`}).join("")+extras(d).filter(o=>o.r.lv>=1&&o.r.lv<=3).map(o=>`<i class="l${o.r.lv}"></i>`).join("")}</span><span class="ct">${c?c+"/"+bl(d).length:"–"}</span></button>`;
   }
   let h=`<div class="row"><div><div class="eyebrow">Historial</div><h2 class="h2">Tu calendario</h2></div><button type="button" class="btn sm" data-a="close">Listo</button></div>
   <div class="cal-h"><button type="button" class="cal-n" data-a="calnav" data-v="-1" aria-label="Mes anterior">${ic.chl}</button><b>${title}</b><button type="button" class="cal-n" data-a="calnav" data-v="1" aria-label="Mes siguiente" ${sheet.m>=curM?"disabled":""}>${ic.chr}</button></div>
   <div class="cal-w" aria-hidden="true">${["L","M","M","J","V","S","D"].map(l=>`<span>${l}</span>`).join("")}</div>
   <div class="cal-g">${g}</div>
   <div class="leg">${[1,2,3].map(n=>`<span><i style="background:var(--lv${n})"></i>${L[n].n}</span>`).join("")}<span><i style="background:var(--line)"></i>Sin registro</span></div>
-  <p class="sm mut" style="margin-top:8px">Cada barrita es un bloque (del 1 al 5). Abajo ves cuántos registraste. El punto azul marca que respondiste hábitos.</p>
+  <p class="sm mut" style="margin-top:8px">Cada barrita es un bloque de ese día. Abajo ves cuántos registraste. El punto azul marca que respondiste hábitos.</p>
   <div class="msum"><div><b class="tab">${mr}</b><span>registros</span></div><div><b class="tab">${md}</b><span>día${md===1?"":"s"} con datos</span></div><div><b class="tab">${md?f1(sum/mr):"–"}</b><span>promedio de 3</span></div></div>`;
   if(!sheet.sel)return h+`<div class="empty" style="margin-top:18px;padding:24px 16px"><b>Toca un día</b>Verás qué registraste en cada bloque.</div>`;
-  const d=sheet.sel,x=by[d]||{},c=Object.keys(x).length,hv=habs[d]||{};
-  h+=`<section class="dd" aria-label="Detalle del día"><h3>${longDate(d)}</h3><div class="sub tab">${c} de 5 bloques registrados</div>`;
+  const d=sheet.sel,x=by[d]||[],c=x.length,hv=habs[d]||{};
+  h+=`<section class="dd" aria-label="Detalle del día"><h3>${longDate(d)}</h3><div class="sub tab">${c} de ${bl(d).length} bloques registrados</div>`;
   if(HAB.some(k=>hv[k.k]!==undefined))h+=`<div class="dh" aria-label="Hábitos del día">${HAB.map(k=>`<span><i class="${hv[k.k]===1?"y":hv[k.k]===0?"n":"z"}">${hv[k.k]===1?ic.ok:hv[k.k]===0?ic.no:""}</i>${k.n}</span>`).join("")}</div>`;
-  B.forEach((_,i)=>{
+  bl(d).forEach((_,i)=>{
     const r=logs[id(d,i)],k=id(d,i);
-    if(r&&r.lv>=1&&r.lv<=3)h+=`<div class="dr"><span class="bn l${r.lv}">${i+1}</span><div class="tx"><b><span class="pill l${r.lv}" style="margin-right:8px">${L[r.lv].n}</span><span class="tab" style="display:inline;font-weight:600;color:var(--mut);font-size:12px">${rng(i)}</span></b><span>${meta(r)}</span></div><button class="del" type="button" data-a="del" data-k="${k}">${armed===k?"¿Seguro?":"Eliminar"}</button></div>`;
-    else h+=`<div class="dr no"><span class="bn">${i+1}</span><div class="tx"><b>${r&&r.sk?"No trabajé":"Sin registro"}</b><span class="tab">${rng(i)}${r&&r.sk&&r.why?" · "+esc(r.why):""}</span></div></div>`;
+    if(r&&r.lv>=1&&r.lv<=3)h+=`<div class="dr"><span class="bn l${r.lv}">${i+1}</span><div class="tx"><b><span class="pill l${r.lv}" style="margin-right:8px">${L[r.lv].n}</span><span class="tab" style="display:inline;font-weight:600;color:var(--mut);font-size:12px">${rtxt(r,d,i)}</span></b><span>${meta(r)}</span></div><button class="del" type="button" data-a="del" data-k="${k}">${armed===k?"¿Seguro?":"Eliminar"}</button></div>`;
+    else h+=`<div class="dr no"><span class="bn">${i+1}</span><div class="tx"><b>${r&&r.sk?"No trabajé":"Sin registro"}</b><span class="tab">${rtxt(r,d,i)}${r&&r.sk&&r.why?" · "+esc(r.why):""}</span></div></div>`;
   });
+  h+=extraRows(extras(d),true);
   return h+`</section>`;
 }
 
