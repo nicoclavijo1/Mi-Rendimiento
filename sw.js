@@ -1,4 +1,4 @@
-const V="mr-1.3.5";
+const V="mr-1.3.6";
 const CORE=["./","index.html","manifest.webmanifest","icons/icon-192.png","icons/icon-512.png","icons/apple-touch-icon.png"];
 self.addEventListener("install",e=>{e.waitUntil(caches.open(V).then(c=>c.addAll(CORE)))});
 self.addEventListener("message",e=>{if(e.data==="skip")self.skipWaiting()});
