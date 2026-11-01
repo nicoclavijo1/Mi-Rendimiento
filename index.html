@@ -127,6 +127,21 @@ h1,h2,h3,p{margin:0}
 .pzs p{margin-top:4px;color:var(--mut);font-size:14px;line-height:1.45}
 .pzs ul{margin:8px 0 0;padding-left:18px;color:var(--mut);font-size:14px;line-height:1.5}
 .pzs li+li{margin-top:5px}
+textarea.na{width:100%;resize:none;background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:12px 14px;min-height:76px;font:inherit;color:var(--tx);line-height:1.4}
+.plg{border:1.5px solid var(--ac);background:var(--bg2);border-radius:20px;padding:16px;margin-top:20px}
+.plg .tip{margin-top:8px;font-size:13px;color:var(--mut);line-height:1.45}
+.plb{margin-top:12px}
+.plb .hd{display:flex;align-items:center;gap:12px}
+.plb .tk{margin-top:12px}
+.plb .tk .seg{margin-top:0}
+.plb input.na{width:100%;margin-top:12px}
+.plb .tt{font-weight:800;font-size:16px}
+.plb .nt{font-size:13px;color:var(--mut);margin-top:2px}
+.plb .none{color:var(--mut);font-size:14px}
+.plgo{font-size:20px;line-height:1.35;font-weight:800;margin-top:8px;color:var(--tx)}
+.blk .n:has(.plt){display:flex;flex-wrap:wrap;align-items:baseline;column-gap:8px}
+.plt{font-size:13px;font-weight:700;color:var(--ac);white-space:nowrap}
+.plt2{font-size:13px;color:var(--mut);margin-top:2px}
 .nav{position:fixed;left:0;right:0;bottom:0;z-index:5;background:var(--bg2);border-top:1px solid var(--line);
   padding:8px max(12px,env(safe-area-inset-right,0px)) calc(8px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px))}
 .nav div{max-width:680px;margin:auto;display:flex;gap:6px}
@@ -584,7 +599,8 @@ const NAV=[
  ["hoy","Hoy",'<path d="M4 11l8-7 8 7v9a1 1 0 0 1-1 1h-4v-6h-6v6H5a1 1 0 0 1-1-1z"/>'],
  ["se","Semana",'<rect x="3.5" y="5" width="17" height="15.5" rx="3"/><path d="M3.5 10h17M8 3v4M16 3v4M7.5 14h9M7.5 17h5"/>'],
  ["an","Análisis",'<path d="M5 20v-7M11 20V5M17 20V10M3 20h18"/>'],
- ["fo","Modo focus",'<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r=".9" fill="currentColor"/>']];
+ ["fo","Modo focus",'<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r=".9" fill="currentColor"/>'],
+ ["pl","Planear mañana",'<path d="M9 4h6M9 4a2 2 0 0 0-2 2H6a1 1 0 0 0-1 1v13a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1h-1a2 2 0 0 0-2-2M9 13l2.2 2.2L15.5 11"/>']];
 const ic={
  gear:'<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33h0a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51h0a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82v0a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>',
  ok:'<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg>',
@@ -612,6 +628,7 @@ function todayQuote(d){d=d||new Date();const n=QUO.length,day=Math.floor(Date.UT
 function quoteHtml(hr){hr=hr==null?new Date().getHours():hr;const night=hr>=19||hr<5;
   return`<p class="q">${esc(todayQuote())}</p>`+(night?`<div class="night" role="note">${ic.moon}<b>Acuérdate de dormir bien, esto es lo más importante.</b></div>`:"")}
 const clone=o=>JSON.parse(JSON.stringify(o));
+let plans={},plansPend={};
 let logs={},habs={},acts=clone(DEF),actsTs=0,prof={name:"",av:0},profTs=0,pName="",cloud=false,lastTop="",tab="hoy",anTab="r",actF="all",habDay="hoy",projs=clone(DEFP),projsTs=0,weekOff=0,wkOpen={},sheet=null,sheetBack=null,col=null,armed=null,tmr=null;
 const $=s=>document.querySelector(s),pad=n=>String(n).padStart(2,"0");
 const dk=d=>d.getFullYear()+"-"+pad(d.getMonth()+1)+"-"+pad(d.getDate());
@@ -674,15 +691,15 @@ try{const t=localStorage.getItem("nc_theme");if(t==="dark"||t==="light")document
 const heat=v=>{const p=Math.round(12+(v-1)/2*88);return`background:color-mix(in srgb,var(--ac) ${p}%,var(--bg2));color:${p>=55?"#fff":"var(--tx)"}`};
 
 /* ---------- Almacenamiento ---------- */
-function lsLoad(){try{const o=JSON.parse(localStorage.getItem("nc_rend")||"{}");logs=o.logs||{};habs=o.habs||{};const used=Object.keys(logs).length>0;{const sc=parseScheds(o.scheds);if(sc){scheds=sc;schedsTs=o.schedsTs||0}}if(o.acts&&o.acts.w&&o.acts.p){acts=o.acts;actsTs=o.actsTs||0}else if(used){acts=clone(OLDACTS)}if(Array.isArray(o.projs)){projs=o.projs;projsTs=o.projsTs||0}else if(used){projs=clone(OLDPROJ)}if(o.prof){prof={name:String(o.prof.name||"").slice(0,24),av:+o.prof.av||0};profTs=o.profTs||0}}catch(e){}}
-function lsSave(){try{localStorage.setItem("nc_rend",JSON.stringify({logs,habs,acts,actsTs,prof,profTs,projs,projsTs,scheds,schedsTs}))}catch(e){}}
+function lsLoad(){try{const o=JSON.parse(localStorage.getItem("nc_rend")||"{}");logs=o.logs||{};habs=o.habs||{};const used=Object.keys(logs).length>0;{const sc=parseScheds(o.scheds);if(sc){scheds=sc;schedsTs=o.schedsTs||0}}if(o.acts&&o.acts.w&&o.acts.p){acts=o.acts;actsTs=o.actsTs||0}else if(used){acts=clone(OLDACTS)}if(Array.isArray(o.projs)){projs=o.projs;projsTs=o.projsTs||0}else if(used){projs=clone(OLDPROJ)}if(o.prof){prof={name:String(o.prof.name||"").slice(0,24),av:+o.prof.av||0};profTs=o.profTs||0}plans=parsePlans(o.plans)}catch(e){}}
+function lsSave(){try{localStorage.setItem("nc_rend",JSON.stringify({logs,habs,acts,actsTs,prof,profTs,projs,projsTs,scheds,schedsTs,plans}))}catch(e){}}
 function parseProjs(v){try{if(typeof v==="string")v=JSON.parse(v);if(Array.isArray(v))return v.filter(p=>p&&p.n).map(p=>({n:String(p.n).slice(0,40),d:String(p.d||"").slice(0,60),c:p.c==="w"?"w":"p",st:p.st==="s"?"s":"p"}))}catch(e){}return null}
 function saveProjs(){projsTs=Date.now();lsSave();wr(()=>col.doc("proj").set({items:JSON.stringify(projs),ts:projsTs}))}
 const b64=u=>{let t="";for(let i=0;i<u.length;i+=8192)t+=String.fromCharCode.apply(null,u.subarray(i,i+8192));return btoa(t)};
 const unb64=t=>Uint8Array.from(atob(t),c=>c.charCodeAt(0));
 async function gz(t){const cs=new Blob([t]).stream().pipeThrough(new CompressionStream("gzip"));return new Uint8Array(await new Response(cs).arrayBuffer())}
 async function ungz(u){const ds=new Blob([u]).stream().pipeThrough(new DecompressionStream("gzip"));return await new Response(ds).text()}
-async function makeCode(){const j=JSON.stringify({v:1,n:{l:Object.keys(logs).length,h:Object.keys(habs).length},logs,habs,acts,actsTs,prof,profTs,projs,projsTs,scheds,schedsTs});
+async function makeCode(){const j=JSON.stringify({v:1,n:{l:Object.keys(logs).length,h:Object.keys(habs).length},logs,habs,acts,actsTs,prof,profTs,projs,projsTs,scheds,schedsTs,plans});
   try{if(typeof CompressionStream!=="undefined")return"NC2:"+b64(await gz(j))}catch(e){}
   return"NC1:"+b64(new TextEncoder().encode(j))}
 async function readCode(c){c=String(c).replace(/\s+/g,"");const k=c.slice(0,4),u=unb64(c.slice(4));
@@ -703,6 +720,7 @@ function importData(o){
   if(o.acts&&((+o.actsTs||0)>actsTs||actsTs===0)){const a=parseActs(o.acts);if(a){acts=a;actsTs=+o.actsTs||0;w.push(["cfg",{acts:JSON.stringify(acts),ts:actsTs}])}}
   if(o.projs&&((+o.projsTs||0)>projsTs||projsTs===0)){const a=parseProjs(o.projs);if(a){projs=a;projsTs=+o.projsTs||0;w.push(["proj",{items:JSON.stringify(projs),ts:projsTs}])}}
   {const sc=parseScheds(o.scheds);if(sc&&mergeScheds(sc)){schedsTs=Date.now();w.push(["sch",{items:JSON.stringify(scheds),ts:schedsTs}]);syncB()}}
+  {const pi=parsePlans(o.plans);Object.keys(pi).forEach(d=>{const c=plans[d];if(!c||(+c.ts||0)<(+pi[d].ts||0)){plans[d]=pi[d];w.push(["plan_"+d,planDoc(pi[d])])}})}
   if(o.prof&&(+o.profTs||0)>profTs){prof={name:String(o.prof.name||"").slice(0,24),av:+o.prof.av||0};profTs=+o.profTs;w.push(["prof",{name:prof.name,av:prof.av,ts:profTs}])}
   lsSave();wr(()=>Promise.all(w.map(([k,x])=>col.doc(k).set(x))));
   render();renderTop();return n;
@@ -751,15 +769,17 @@ async function init(){
       if(db&&uid){
         col=db.collection("data/users/"+uid);
         col.onSnapshot(s=>{
-          const Lg={},Hb={};let cfg=null,pr=null,pj=null,sc=null;
+          const Lg={},Hb={},Pl={};let cfg=null,pr=null,pj=null,sc=null;
           s.docs.forEach(d=>{const x=d.data();if(!x)return;const o=clone(x);
             if(d.id.startsWith("log_"))Lg[d.id]=o;
             else if(d.id.startsWith("hab_"))Hb[o.date||d.id.slice(4)]=o;
+            else if(d.id.startsWith("plan_"))Pl[d.id.slice(5)]=o;
             else if(d.id==="cfg")cfg=o;
             else if(d.id==="proj")pj=o;
             else if(d.id==="sch")sc=o;
             else if(d.id==="prof")pr=o});
           logs=Lg;habs=Hb;
+          if(!plTm){const pc=parsePlans(Pl);Object.keys(pc).forEach(d=>{const c=plans[d];if(!c||(+c.ts||0)<=(+pc[d].ts||0))plans[d]=pc[d]})}
           if(sc){const a=parseScheds(sc.items);if(a){mergeScheds(a);schedsTs=Math.max(schedsTs,sc.ts||0)}}
           syncB();
           if(cfg){const a=parseActs(cfg.acts);if(a&&(cfg.ts||0)>=actsTs){acts=a;actsTs=cfg.ts||0}}
@@ -770,6 +790,45 @@ async function init(){
       }
     }
   }catch(e){}
+}
+
+/* ---------- Planeación del día siguiente ---------- */
+const PL_TEST=false; /* PRUEBA: planear HOY. Poner false para planear mañana */
+const plD=()=>PL_TEST?dk(new Date()):schTomorrow();
+const plW=PL_TEST?"hoy":"mañana";
+const dRe2=/^\d{4}-\d{2}-\d{2}$/;
+function parsePlans(v){const out={};if(!v||typeof v!=="object")return out;
+  Object.keys(v).forEach(k=>{const p=v[k];if(!p||typeof p!=="object")return;const d=dRe2.test(p.date||"")?p.date:(dRe2.test(k)?k:null);if(!d)return;
+    let it=p.items;if(typeof it==="string"){try{it=JSON.parse(it)}catch(e){it={}}}
+    const items={};if(it&&typeof it==="object")Object.keys(it).forEach(b=>{const x=it[b];if(!x)return;const a=String(x.a||"").slice(0,40),n=String(x.n||"").slice(0,120);if(a||n||x.c==="p")items[String(b).slice(0,40)]={c:x.c==="p"?"p":"w",a,n}});
+    out[d]={date:d,goal:String(p.goal||"").slice(0,200),items,closed:p.closed?1:0,ts:+p.ts||0}});return out}
+const planDoc=p=>({date:p.date,goal:p.goal,items:JSON.stringify(p.items),closed:p.closed?1:0,ts:p.ts});
+function getPlan(d){if(!plans[d])plans[d]={date:d,goal:"",items:{},closed:0,ts:0};return plans[d]}
+function savePlan(d){const p=plans[d];if(!p)return;p.ts=Date.now();lsSave();wr(()=>col.doc("plan_"+d).set(planDoc(p)))}
+let plTm=null;function savePlanLater(d){clearTimeout(plTm);plTm=setTimeout(()=>{plTm=null;savePlan(d)},500)}
+function planFor(d,i){const p=plans[d];if(!p||!p.closed)return null;const b=verFor(d).blocks[i];if(!b)return null;const x=p.items[b.id];return x&&(x.a||x.n)?x:null}
+function plan(){
+  const d=plD(),p=plans[d]||{goal:"",items:{},closed:0},bs=verFor(d).blocks;
+  const head=`<div class="eyebrow">Planeación</div><h1 class="big">${cap(plW)}<span>${longDate(d)}</span></h1>${PL_TEST?'<p class="sm mut" style="margin-top:10px">Modo prueba: por ahora planeas el día de hoy.</p>':""}`;
+  if(p.closed){
+    return head+`<div class="plg"><div class="eyebrow">Tu objetivo</div><p class="plgo">${esc(p.goal)}</p></div>
+    <div class="eyebrow" style="margin-top:26px">Tus bloques</div>
+    ${bs.map((b,i)=>{const x=p.items[b.id];return`<div class="card plb"><div class="hd"><span class="bn">${i+1}</span><div><div class="n">Bloque ${i+1}</div><div class="r tab" style="color:var(--mut);font-size:13px">${t12(b.s)} – ${t12(b.e)}</div></div></div><div class="tk">${x&&(x.a||x.n)?`<div class="tt">${esc(x.a||x.n)}</div>${x.a&&x.n?`<div class="nt">${esc(x.n)}</div>`:""}`:`<span class="none">Sin tarea definida</span>`}</div></div>`}).join("")}
+    <p class="sm mut" style="margin-top:14px">${PL_TEST?"Hoy verás":"Mañana verás"} estas tareas en cada bloque, solo como guía. Podrás registrar otra actividad si cambian las cosas.</p>
+    <button type="button" class="btn g" style="width:100%;margin-top:14px" data-a="plmod">Modificar</button>`;
+  }
+  return head+`<div class="plg"><div class="eyebrow">Tu objetivo de ${plW}</div>
+    <textarea class="na" id="plg" maxlength="200" rows="3" placeholder="Escríbelo con ganas: ¿qué quieres lograr ${plW}?" aria-label="Objetivo de ${plW}" style="margin-top:10px">${esc(p.goal)}</textarea>
+    <p class="tip">Elige un objetivo que sea un buen reto, sin excederte, y que te motive fuertemente. Escríbelo con emoción: tiene que darte ganas de cumplirlo.</p></div>
+  <div class="eyebrow" style="margin-top:26px">Tus bloques de ${plW}</div>
+  <p class="sm mut" style="margin-top:6px">Elige qué harías en cada uno. Es opcional y puede cambiar.</p>
+  ${bs.map((b,i)=>{const x=p.items[b.id]||{c:"w",a:"",n:""},c=x.c==="p"?"p":"w";
+    return`<div class="card plb"><div class="hd"><span class="bn">${i+1}</span><div><div class="n">Bloque ${i+1}</div><div class="r tab" style="color:var(--mut);font-size:13px">${t12(b.s)} – ${t12(b.e)}</div></div></div>
+    <div class="tk"><div class="seg"><button type="button" class="${c==="w"?"on":""}" data-a="plcat" data-b="${b.id}" data-v="w">Trabajo</button><button type="button" class="${c==="p"?"on":""}" data-a="plcat" data-b="${b.id}" data-v="p">Personal</button></div>
+    <div class="chips">${acts[c].map((a,k)=>`<button type="button" class="${x.a===a?"on":""}" data-a="plpick" data-b="${b.id}" data-k="${k}" aria-pressed="${x.a===a}">${esc(a)}</button>`).join("")||'<span class="mut sm">No hay actividades en esta lista.</span>'}</div>
+    <input class="na plnote" data-b="${b.id}" maxlength="120" placeholder="¿Qué vas a hacer? (opcional)" value="${esc(x.n)}" aria-label="Descripción del bloque ${i+1}"></div></div>`}).join("")}
+  <button type="button" class="btn" style="width:100%;margin-top:18px" data-a="plclose" ${p.goal.trim()?"":"disabled"} id="plcl">Cerrar plan</button>
+  ${p.goal.trim()?"":'<p class="sm mut" id="plh" style="margin-top:8px;text-align:center">Escribe tu objetivo para poder cerrar el plan.</p>'}`;
 }
 
 /* ---------- Escritura de datos ---------- */
@@ -809,6 +868,10 @@ function renameAct(k,v){
 /* ---------- Acciones ---------- */
 const A={
  tab(d){tab=d.v;render();scrollTo(0,0)},
+ plcat(d){const t=plD(),p=getPlan(t),x=p.items[d.b]||{c:"w",a:"",n:""};x.c=d.v==="p"?"p":"w";if(x.a&&!acts[x.c].includes(x.a))x.a="";p.items[d.b]=x;savePlan(t);render()},
+ plpick(d){const t=plD(),p=getPlan(t),x=p.items[d.b]||(p.items[d.b]={c:"w",a:"",n:""}),c=x.c==="p"?"p":"w",a=acts[c][+d.k];if(a==null)return;x.a=x.a===a?"":a;savePlan(t);render()},
+ plclose(){const t=plD(),p=getPlan(t);if(!p.goal.trim())return;Object.keys(p.items).forEach(k=>{const x=p.items[k];if(!x.a&&!x.n)delete p.items[k]});p.closed=1;savePlan(t);render();scrollTo(0,0);toast("Plan cerrado. "+(PL_TEST?"Míralo en tus bloques de hoy.":"Mañana lo verás en tus bloques."))},
+ plmod(){const t=plD(),p=getPlan(t);p.closed=0;savePlan(t);render();scrollTo(0,0)},
  theme(){const t=isDark()?"light":"dark";document.documentElement.dataset.theme=t;try{localStorage.setItem("nc_theme",t)}catch(e){}syncSw()},
  ar(d){sheet.ar=+d.v;arUpd()},
  arclr(){sheet.ar=0;arUpd()},
@@ -959,6 +1022,9 @@ function arUpd(){
 }
 function arSet(e){const r=e.target;if(!r||r.id!=="arr"||!sheet||sheet.t!=="reg")return;sheet.ar=+r.value;arUpd()}
 document.addEventListener("input",arSet);
+document.addEventListener("input",e=>{const el=e.target;if(!el||tab!=="pl")return;const t=plD();
+  if(el.id==="plg"){const p=getPlan(t);p.goal=el.value;savePlanLater(t);const b=$("#plcl"),h=$("#plh");if(b)b.disabled=!p.goal.trim();if(h)h.hidden=!!p.goal.trim()}
+  else if(el.classList&&el.classList.contains("plnote")){const p=getPlan(t),b=el.dataset.b,x=p.items[b]||(p.items[b]={c:"w",a:"",n:""});x.n=el.value;savePlanLater(t)}});
 document.addEventListener("change",arSet);
 document.addEventListener("pointerup",e=>{if(e.target&&e.target.id==="arr")arSet(e)});
 document.addEventListener("keyup",e=>{if(e.target&&e.target.id==="arr")arSet(e)});
@@ -1160,7 +1226,8 @@ function hoy(){
     const s=st(i),r=rs[i],k=id(t,i);
     if(r&&r.sk){h+=`<div class="card blk tl sk"><div class="row"><div class="bh"><span class="bn">${i+1}</span><div><div class="n">Bloque ${i+1}</div><div class="r tab">${rng(i)}</div></div></div><span class="chip">No trabajé</span></div>
     <div class="row"><span class="mut sm">${esc(r.why||"Sin motivo")}</span><button class="del" type="button" data-a="del" data-k="${k}">${armed===k?"¿Seguro? Toca de nuevo":"Deshacer"}</button></div></div>`;return}
-    h+=`<div class="card blk tl${r?" l"+r.lv:""}"><div class="row"><div class="bh"><span class="bn${r?" l"+r.lv:s==="act"?" act":""}">${i+1}</span><div><div class="n">Bloque ${i+1}</div><div class="r tab">${rng(i)}</div></div></div>
+    const pf=r?null:planFor(t,i);
+    h+=`<div class="card blk tl${r?" l"+r.lv:""}"><div class="row"><div class="bh"><span class="bn${r?" l"+r.lv:s==="act"?" act":""}">${i+1}</span><div><div class="n">Bloque ${i+1}${pf?`<span class="plt">${esc(pf.a||pf.n)}</span>`:""}</div><div class="r tab">${rng(i)}</div>${pf&&pf.a&&pf.n?`<div class="plt2">${esc(pf.n)}</div>`:""}</div></div>
     ${r?pill(r.lv):`<span class="chip ${s==="act"?"act":""}">${s==="pend"?"Pendiente":s==="act"?"En curso":"Sin registrar"}</span>`}</div>`;
     if(r)h+=`<div class="row"><span class="mut sm">${meta(r)}</span><button class="del" type="button" data-a="del" data-k="${k}">${armed===k?"¿Seguro? Toca de nuevo":"Eliminar"}</button></div>`;
     else if(s==="done")h+=`<button class="btn" type="button" data-a="open" data-d="${t}" data-i="${i}">Registrar rendimiento</button>`;
@@ -1566,8 +1633,10 @@ function calHtml(){
 }
 
 function render(){
-  $("#app").innerHTML=tab==="hoy"?hoy():tab==="se"?se():tab==="an"?an():foc();
+  let fk=null;{const a=document.activeElement;if(tab==="pl"&&a&&a.closest&&a.closest("#app")&&(a.id==="plg"||(a.classList&&a.classList.contains("plnote")))){fk={id:a.id,b:a.dataset&&a.dataset.b,s:a.selectionStart,e:a.selectionEnd}}}
+  $("#app").innerHTML=tab==="hoy"?hoy():tab==="se"?se():tab==="an"?an():tab==="pl"?plan():foc();
   $("#nav").firstElementChild.innerHTML=NAV.map(([k,n,p])=>`<button type="button" class="${tab===k?"on":""}" data-a="tab" data-v="${k}" aria-label="${n}" title="${n}" ${tab===k?'aria-current="page"':""}><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${p}</svg></button>`).join("");
+  if(fk){const el=fk.id==="plg"?$("#plg"):document.querySelector('.plnote[data-b="'+fk.b+'"]');if(el){try{el.focus({preventScroll:true});el.setSelectionRange(fk.s,fk.e)}catch(x){}}}
   syncSw();if(sheet&&sheet.t==="cal")renderSheet();
 }
 setInterval(()=>{renderTop();if(tab==="hoy"&&!sheet)render()},30000);
